@@ -4476,7 +4476,7 @@ input[type=radio] {
 }
 
 .slider .slide__subtitle {
-  color: #213360;
+  color: #ea4335;
   display: block;
   font-size: 16px;
   font-weight: 700;
@@ -4490,7 +4490,7 @@ input[type=radio] {
 }
 
 .slider .slide__desc {
-  color: #283b6a;
+  color: #ea4335;
   font-size: 17px;
   line-height: 1.5;
   font-weight: 700;

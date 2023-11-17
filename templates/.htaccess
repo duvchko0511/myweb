@@ -1,8 +1,0 @@
-RewriteEngine On
-DirectoryIndex index.html
-RewriteRule ^index?$ index.html
-RewriteRule ^effect?$ index.html
-RewriteRule ^register?$ register.php
-RewriteRule ^login?$ login.php
-RewriteRule ^logining?$ views/logining.php
-RewriteRule ^logout?$ views/logout.php
