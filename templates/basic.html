@@ -46,7 +46,7 @@
                       <div class="see__icon">
                         <i class="see-icon"></i>
                       </div>  
-                      <a href="appointment.html" class="btn btn__secondary btn__link btn__block">
+                      <a href="{%url 'appointment'%}" class="btn btn__secondary btn__link btn__block">
                         <span>Хаяг байршилийн нэгдсэн сан</span> <i class="icon-arrow-right"></i>
                       </a>
                     </div><!-- /.miniPopup-emergency -->
@@ -69,7 +69,7 @@
       <nav class="navbar navbar-expand-lg sticky-navbar">
         <div class="container-fluid">
           <a class="navbar-brand" href="index">
-            <img src="{% static 'assets/images/logo/last.png' %}" class="logo-dark logo" alt="logo">
+            <img src="{% static 'assets/images/logo/odo.png' %}" class="logo-dark logo" alt="logo">
            </a>
           <button class="navbar-toggler" type="button">
             <span class="menu-lines"><span></span></span>
@@ -136,109 +136,53 @@
         <div class="slide-item align-v-h">
           <div class="bg-img"><img src="{% static 'assets/images/sliders/deeres.jpg' %}" alt="slide img"></div>
           <div class="container">
+            <h2 class="slide__title">Монгол хаяг</h2>
+            
+            <h4>Хаяг байршлын нэгдсэн цахим сан</h4>
             <div class="row align-items-center">
               <div class="col-sm-12 col-md-12 col-lg-12 col-xl-7">
                 <div class="slide__content">
-                  <h2 class="slide__title">Монгол хаяг
-                  </h2>
                   <p class="slide__desc"></p>
                   <ul class="features-list list-unstyled mb-0 d-flex flex-wrap">
                     <div class="d-flex flex-wrap align-items-center">
-                    <a href="{% url 'shop' %}" class="btn btn__primary btn__rounded btn__block btn__xhight mt-10">
-                      <span>Хаяг байршил</span>
-                      <i class="icon-arrow-right"></i>
-                    </a>
-                    <a href="{% url 'zahialagch' %}" class="btn btn__white btn__rounded btn__block btn__xhight mt-10">
-                      <span>Үйл ажиллагааны Чиглэл</span>
-                      <i class="icon-arrow-right"></i>
-                    </a>
-                  </div>
+                      <a href="{% url 'shop' %}" class="btn btn__primary btn__rounded btn__block btn__xhight mt-10">
+                        <span>Хаяг байршилаар</span>
+                        <i class="icon-arrow-right"></i>
+                      </a>
+                      <a href="{% url 'zahialagch' %}" class="btn btn__white btn__rounded btn__block btn__xhight mt-10">
+                        <span>Үйл ажиллагааны Чиглэл</span>
+                        <i class="icon-arrow-right"></i>
+                      </a>
+                    </div>
                     </li><!-- /.feature-item-->
                   </ul><!-- /.features-list -->
-                </div>  <!-- /.slide-content -->
+                </div> <!-- /.slide-content -->
               </div><!-- /.col-xl-7 -->
             </div><!-- /.row -->
           </div><!-- /.container -->
         </div><!-- /.slide-item -->
+        <!-- Add the title to the second and third slides as well, if needed -->
         <div class="slide-item align-v-h">
           <div class="bg-img"><img src="{% static 'assets/images/sliders/Ub.jpg' %}" alt="slide img"></div>
           <div class="container">
             <div class="welcome-hero">
-              <!---->	
               <h2> <br></h2>
-                <p>
-                  
-                </p>
-              </div>
-          <!--<div class="welcome-hero-serch-box">
-                <div class="welcome-hero-form">
-                  <div class="single-welcome-hero-form">
-                    
-                    <form action="index.html">
-                      <input type="text" placeholder="базаас орж ирэх мэдээлэл байна" />
-                    </form>
-                    <div class="welcome-hero-form-icon">
-                      <i class="flaticon-list-with-dots"></i>
-                    </div>
-                  </div>
-                  <div class="sing
-                  e-welcome-hero-form">
-                    
-                    <form action="index.html">
-                      <input type="text" placeholder="базаас орж ирэх мэдээлэл байна" />
-                    </form>
-                    <div class="welcome-hero-form-icon">
-                      <i class="flaticon-gps-fixed-indicator"></i>
-                    </div>
-                  </div>
-                </div>
-                <div class="welcome-hero-serch">
-                  <button class="welcome-hero-btn" onclick="window.location.href='#'">
-                     search  <i data-feather="search"></i> 
-                  </button>
-                </div>-->    
-              </div><!-- /.slide-item -->
-      </div><!-- /.carousel -->
+              <p></p>
+            </div>
+          </div><!-- /.container -->
+        </div><!-- /.slide-item -->
         <div class="slide-item align-v-h">
           <div class="bg-img"><img src="{% static 'assets/images/sliders/ulaaka.jpg' %}" alt="slide img"></div>
           <div class="container">
             <div class="welcome-hero">
-              <!---->	
               <h2> <br></h2>
-                <p>
-                  
-                </p>
-              </div>
-          <!--<div class="welcome-hero-serch-box">
-                <div class="welcome-hero-form">
-                  <div class="single-welcome-hero-form">
-                    
-                    <form action="index.html">
-                      <input type="text" placeholder="базаас орж ирэх мэдээлэл байна" />
-                    </form>
-                    <div class="welcome-hero-form-icon">
-                      <i class="flaticon-list-with-dots"></i>
-                    </div>
-                  </div>
-                  <div class="sing
-                  e-welcome-hero-form">
-                    
-                    <form action="index.html">
-                      <input type="text" placeholder="базаас орж ирэх мэдээлэл байна" />
-                    </form>
-                    <div class="welcome-hero-form-icon">
-                      <i class="flaticon-gps-fixed-indicator"></i>
-                    </div>
-                  </div>
-                </div>
-                <div class="welcome-hero-serch">
-                  <button class="welcome-hero-btn" onclick="window.location.href='#'">
-                     search  <i data-feather="search"></i> 
-                  </button>
-                </div>-->    
-              </div><!-- /.slide-item -->
+              <p></p>
+            </div>
+          </div><!-- /.container -->
+        </div><!-- /.slide-item -->
       </div><!-- /.carousel -->
-    </section><!-- /.slider -->
+    </section>
+    <!-- /.slider -->
 
     <!-- ============================
         contact info
