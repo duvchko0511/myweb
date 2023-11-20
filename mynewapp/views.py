@@ -32,3 +32,5 @@ def signup(request):
     return render(request, 'signup')
 def horoo(request):
     return render(request, 'horoo.html')
+def zahialagch(request):
+    return render(request, 'zahialagch.html')
