@@ -14,6 +14,7 @@ urlpatterns = [
     path('login/', views.login, name='login'),
     path('signup/', views.signup, name='signup'),
     path('horoo/', views.horoo, name='horoo'),
-    path('zahialagch/', views.zahialagch, name='zahialagch')
+    path('zahialagch/', views.zahialagch, name='zahialagch'),
+    path('huduu/', views.huduu, name='huduu')
     # Other URL patterns
 ]

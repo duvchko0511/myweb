@@ -34,3 +34,5 @@ def horoo(request):
     return render(request, 'horoo.html')
 def zahialagch(request):
     return render(request, 'zahialagch.html')
+def huduu(request):
+    return render(request, 'huduu.html')

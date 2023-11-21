@@ -1,0 +1,255 @@
+.card-title {
+  margin-top: 1%;
+  font-size: 12px;
+  padding-bottom: 5%;
+}
+
+.card-title1 {
+  margin-top: 1%;
+  font-size: 12px;
+  padding-bottom: 4%;
+}
+
+.coll {
+  width: 50%;
+  position: relative;
+  float: left;
+  padding-bottom: 2%;
+}
+
+.colr {
+  width: 50%;
+  position: relative;
+  float: right;
+  padding-bottom: 3%;
+}
+
+input[type="text"] {
+  width: 80%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+select {
+  width: 80%;
+  padding: 12px 20px;
+  margin: 7px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+textarea {
+  max-height: 100%;
+  max-width: 90%;
+  height: 100%;
+  width: 90%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.fileborder {
+  border: 1px solid #ccc;
+  height: 35%;
+  padding-left: 30%;
+}
+.filebordertext{
+  font-weight: bold;
+  text-align: center;
+  
+}
+
+.finishhim {
+  color: #6aa84f;
+  background: rgb(233, 233, 233);
+  height: 40%;
+  border-radius: 25px;
+  width: 35%;
+}
+
+.finishtext {
+  margin-left: 6%;
+  margin-bottom: 1%;
+}
+
+.backbutton {
+  width: 90px;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+}
+
+.sendbutton {
+  width: 90px;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  color: white;
+  background-color: #498be8;
+}
+
+.fileHawsargahDiv {
+  height: 30%;
+  width: 60%;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 0px 10px 2px rgb(203, 203, 203);
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 1%;
+  padding: 30px;
+  position: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+}
+
+.batalgaajuulahDiv {
+  height: 15%;
+  width: 60%;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 0px 10px 2px rgb(203, 203, 203);
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 1%;
+  padding: 30px;
+  position: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+}
+
+.backAndSendDiv {
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.height700 {
+  height: 700px;
+}
+
+.height450 {
+  height: 450px;
+}
+.height600 {
+  height: 600px;
+}
+input[type="date"] {
+  width: 80%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.vndsenDiv {
+  height: 100%;
+  width: 60%;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 0px 10px 2px rgb(203, 203, 203);
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 0%;
+  padding: 30px;
+  position: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+}
+.request {
+  padding-left: 3%;
+  padding-right: 22%;
+  width: 96%;
+}
+
+.borders4 {
+  border: 1px solid rgb(240, 239, 239);
+  width: 96%;
+  background-color: white;
+  box-shadow: 0 1px 10px rgb(0 0 10 / 0.1), 0 1px 6px rgba(150, 150, 150, 0.1);
+  margin-bottom: 0.5em;
+  margin-left: 2%;
+}
+
+.Rcontent4 {
+  padding: 1% 3% 5% 3%;
+
+}
+
+.txt4 {
+  font-size: 14px;
+  margin: 3% 3% 3% 0%;
+}
+
+.box {
+  background-color: #ecedf1;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border: 1px solid #0d6efd;
+}
+
+.roundd {
+  background-color: #6AA84F33;
+  border: 1px solid rgb(212, 212, 212);
+  border-radius: 5em;
+  width: 50%;
+  height: 50px;
+  margin-left: 2%;
+}
+
+
+.border {
+  border: 1px solid rgb(219, 219, 219);
+  width: 50%;
+  background-color: rgb(237, 237, 237);
+  margin-bottom: 0.5em;
+  margin-left: 2%;
+  color: rgb(63, 130, 63);
+}
+
+.R-button4 {
+
+  background-color: rgb(229, 229, 229);
+  border: none;
+  border-radius: 5em;
+  color: black;
+  padding: 12px 28px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+
+}
+
+.R-button4-1 {
+
+  background-color: #498be8;
+  border: none;
+  border-radius: 5em;
+  color: white;
+  padding: 12px 28px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+
+}
+
+.frame {
+  border: 1px solid rgb(219, 219, 219);
+  width: 100%;
+  height: 5em;
+}

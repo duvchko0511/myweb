@@ -11,6 +11,7 @@
   <title>
    {% block title %}{% endblock title %}
   </title>
+  {% block stylecss %}
   <link rel="stylesheet"
   href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Roboto:wght@400;700&display=swap">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
@@ -22,7 +23,7 @@
   <link rel="stylesheet" href="{% static 'assets/css/custom.css' %}">
   <link rel="stylesheet" href="{% static 'assets/css/flaticon.css' %}">
   <link rel="stylesheet" href="{% static 'assets/css/heading.css' %}">
-{% block stylecss %} {% endblock stylecss %}
+ {% endblock stylecss %}
 </head>
 
 <body>
@@ -136,7 +137,7 @@
         <div class="slide-item align-v-h">
           <div class="bg-img"><img src="{% static 'assets/images/sliders/deeres.jpg' %}" alt="slide img"></div>
           <div class="container">
-            <h2 class="slide__title">Монгол хаяг</h2>
+            <h2 class="slide__title center">Монгол хаяг</h2>
             
             <h4>Хаяг байршлын нэгдсэн цахим сан</h4>
             <div class="row align-items-center">
@@ -145,7 +146,7 @@
                   <p class="slide__desc"></p>
                   <ul class="features-list list-unstyled mb-0 d-flex flex-wrap">
                     <div class="d-flex flex-wrap align-items-center">
-                      <a href="{% url 'shop' %}" class="btn btn__primary btn__rounded btn__block btn__xhight mt-10">
+                      <a href="{% url 'huduu' %}" class="btn btn__primary btn__rounded btn__block btn__xhight mt-10">
                         <span>Хаяг байршилаар</span>
                         <i class="icon-arrow-right"></i>
                       </a>
