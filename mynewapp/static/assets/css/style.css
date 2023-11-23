@@ -3012,7 +3012,7 @@ input[type=radio] {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #283b6a;
+  background-color: rgb(240, 96, 1);
 }
 
 .header-topbar .contact__list li {
@@ -3046,8 +3046,8 @@ input[type=radio] {
 }
 
 .header-topbar .social-icons li a {
-  color: #213360;
-  background-color: #46648c;
+  color: #ffffff;
+  background-color: #030303;
 }
 
 .header-topbar .social-icons li a:hover {
@@ -4483,18 +4483,18 @@ input[type=radio] {
 }
 
 .slider .slide__title {
-  font-size: 75px;
-  line-height: 1.1;
-  margin-bottom: 25px;
-  color: red;
+  font-size: 65px;
+  line-height: 2;
+  margin-bottom: 15px;
+  color: rgb(247, 245, 245);
 }
 
 .slider .slide__desc {
-  color: #ea4335;
+  color: #f8f6f6;
   font-size: 17px;
   line-height: 1.5;
   font-weight: 700;
-  max-width: 550px;
+  max-width: 400px;
   margin-bottom: 30px;
 }
 
@@ -4628,7 +4628,7 @@ input[type=radio] {
 @media (min-width: 768px) and (max-width: 991px) {
   .slider .slide__title {
     font-size: 50px;
-    margin-bottom: 10px;
+    margin-bottom: 100px;
   }
 }
 

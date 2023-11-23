@@ -35,38 +35,7 @@
         Header
     =========================== -->
     <header class="header header-layout1">
-      <div class="header-topbar">
-        <div class="container">
-          <div class="row align-items-center">
-            <div class="col-12">
-              <div class="d-flex align-items-center justify-content-between">
-                <ul class="contact__list d-flex flex-wrap align-items-center list-unstyled mb-0">
-                  <li>
-                    <button class="miniPopup-emergency-trigger" type="button">Монгол хаяг</button>
-                    <div id="miniPopup-emergency" class="miniPopup miniPopup-emergency text-center">
-                      <div class="see__icon">
-                        <i class="see-icon"></i>
-                      </div>  
-                      <a href="{%url 'appointment'%}" class="btn btn__secondary btn__link btn__block">
-                        <span>Хаяг байршилийн нэгдсэн сан</span> <i class="icon-arrow-right"></i>
-                      </a>
-                    </div><!-- /.miniPopup-emergency -->
-                  </li>
-                  
-                </ul><!-- /.contact__list -->
-                <div class="d-flex">
-                  <ul class="social-icons list-unstyled mb-0 mr-30">
-                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                  </ul><!-- /.social-icons -->
-
-                </div>
-              </div>
-            </div><!-- /.col-12 -->
-          </div><!-- /.row -->
-        </div><!-- /.container -->
-      </div><!-- /.header-top -->
+     <!-- /.header-top -->
       <nav class="navbar navbar-expand-lg sticky-navbar">
         <div class="container-fluid">
           <a class="navbar-brand" href="index">
@@ -116,7 +85,7 @@
             </ul><!-- /.navbar-nav -->
             <button class="close-mobile-menu d-block d-lg-none"><i class="fas fa-times"></i></button>
             <a href="{% url 'login' %}" class="btn btn__primary btn__rounded mr-30">             
-              <span>Бүртэгүүлэх</span>
+              <span>Нэвтрэх</span>
             </a>
           </div>
         <!-- /.navbar-collapse -->
@@ -135,26 +104,31 @@
       <div class="slick-carousel m-slides-0"
         data-slick='{"slidesToShow": 1, "arrows": true, "dots": false, "speed": 700,"fade": true,"cssEase": "linear"}'>
         <div class="slide-item align-v-h">
-          <div class="bg-img"><img src="{% static 'assets/images/sliders/deeres.jpg' %}" alt="slide img"></div>
+          <div class="bg-img"><img src="{% static 'assets/images/sliders/gogo6.jpg' %}" alt="slide img"></div>
           <div class="container">
-            <h2 class="slide__title center">Монгол хаяг</h2>
-            
-            <h4>Хаяг байршлын нэгдсэн цахим сан</h4>
+            <div class="row align-items-center">
+              <div class="col-sm-12 col-md-12 col-lg-12 col-xl-7">
+                <div class="slide__content">
+                  
+                  <h2 class="slide__title">Монгол хаяг </h2>
+                  <p class="slide__desc">Таныг хамгийн ойр үйлчилгээ рүү очих зам,
+                     тээврийн хэрэгсэл рүү чиглүүлж, 
+                     хол явж цаг алдах, түгжрэлд орохоос  сэргийлэн, 
+                     аюулгүй, тав тухтай амьдрахад туслах
+                      шинэ зууны оновчтой 
+                      хайлтын нэгдсэн сан</p>
+                  <div class="d-flex flex-wrap align-items-center">
+                  
+                  </div>
+                </div><!-- /.slide-content -->
+              </div><!-- /.col-xl-7 -->
+            </div>
             <div class="row align-items-center">
               <div class="col-sm-12 col-md-12 col-lg-12 col-xl-7">
                 <div class="slide__content">
                   <p class="slide__desc"></p>
                   <ul class="features-list list-unstyled mb-0 d-flex flex-wrap">
-                    <div class="d-flex flex-wrap align-items-center">
-                      <a href="{% url 'huduu' %}" class="btn btn__primary btn__rounded btn__block btn__xhight mt-10">
-                        <span>Хаяг байршилаар</span>
-                        <i class="icon-arrow-right"></i>
-                      </a>
-                      <a href="{% url 'zahialagch' %}" class="btn btn__white btn__rounded btn__block btn__xhight mt-10">
-                        <span>Үйл ажиллагааны Чиглэл</span>
-                        <i class="icon-arrow-right"></i>
-                      </a>
-                    </div>
+                  
                     </li><!-- /.feature-item-->
                   </ul><!-- /.features-list -->
                 </div> <!-- /.slide-content -->
@@ -173,7 +147,7 @@
           </div><!-- /.container -->
         </div><!-- /.slide-item -->
         <div class="slide-item align-v-h">
-          <div class="bg-img"><img src="{% static 'assets/images/sliders/ulaaka.jpg' %}" alt="slide img"></div>
+          <div class="bg-img"><img src="{% static 'assets/images/sliders/goyo3.jpg' %}" alt="slide img"></div>
           <div class="container">
             <div class="welcome-hero">
               <h2> <br></h2>
@@ -193,50 +167,24 @@
 				<div class="list-topics-content">
 					<ul>
 						<li>
-							<div class="single-list-topics-content">
+							<div class="single-list-topics-content ">
 								<div class="single-list-topics-icon">
-									<i class="flaticon-restaurant"></i>
+									<img src="{% static 'assets/images/counter/ene.png' %}" alt="Custom Icon" style="width: 45px; height: 45px;">
 								</div>
-								<h5><a href="{% url 'blog' %}">Боловсрол</a></h5>
-								<p>150 listings</p>
+								<h4><a href="{% url 'zahialagch' %}">Үйл ажиллагааны Чиглэл</a></h4>
+								<p>150 нэгжүүд</p>
 							</div>
 						</li>
 						<li>
-							<div class="single-list-topics-content">
+							<div class="single-list-topics-content ">
 								<div class="single-list-topics-icon">
-									<i class="flaticon-travel"></i>
+									<i class="flaticon"></i>
 								</div>
-								<h5><a href="{% url 'blog'%}">Аялал</a></h5>
-								<p>214 listings</p>
+								<h3><a href="{% url 'huduu'%}">Хаяг байршил</a></h3>
+								<p>214 нэгжүүд</p>
 							</div>
 						</li>
-						<li>
-							<div class="single-list-topics-content">
-								<div class="single-list-topics-icon">
-									<i class="flaticon-building"></i>
-								</div>
-								<h5><a href="{% url 'blog'%}">Төр</a></h5>
-								<p>185 listings</p>
-							</div>
-						</li>
-						<li>
-							<div class="single-list-topics-content">
-								<div class="single-list-topics-icon">
-									<i class="flaticon-pills"></i>
-								</div>
-								<h5><a href="{% url 'blog'%}">Эрүүл мэнд</a></h5>
-								<p>200 listings</p>
-							</div>
-						</li>
-						<li>
-							<div class="single-list-topics-content">
-								<div class="single-list-topics-icon">
-									<i class="flaticon-transport"></i>
-								</div>
-								<h5><a href="{% url 'blog'%}">Нийтийн</a></h5>
-								<p>120 listings</p>
-							</div>
-						</li>
+						
 					</ul>
 				</div>
 			</div>
