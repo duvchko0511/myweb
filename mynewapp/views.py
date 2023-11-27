@@ -31,8 +31,8 @@ def login(request):
 def signup(request):
     return render(request, 'signup')
 def horoo(request):
-    return render(request, 'horoo.html')
+    return render(request, 'khoroo/horoo.html')
 def zahialagch(request):
-    return render(request, 'zahialagch.html')
+    return render(request, 'uilajillagaa/zahialagch.html')
 def huduu(request):
-    return render(request, 'huduu.html')
+    return render(request, 'hayg/huduu.html')

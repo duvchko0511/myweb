@@ -130,7 +130,7 @@
             
             <!-- Tab content -->
             <div id="London" class="tabcontent">
-              <h3>Улаанбаатар Дүүрэг</h3>
+              <h5>Улаанбаатар Дүүрэг</h5>
              
                 <div class="container">
                   <div class="row">
@@ -454,7 +454,309 @@
                     </div><!-- /.col-lg-3 -->
                   </div><!-- /.row -->
                 </div><!-- /.container -->
-          
+                <div id="Paris"class="tabcontent">
+                  <h5>Аймагууд</h5>
+                  <div class="tab"> 
+                    <button class="tablinks" onclick="openCity(event, 'baruun')"><h5>Баруун бүс</h5></button>
+                    <button class="tablinks" onclick="openCity(event, 'tuv')"><h5>Төвийн бүс</h5></button>
+                    <button class="tablinks" onclick="openCity(event, 'zuun')"><h5>Зүүн бүс</h5></button>
+                    <div id="tuv"class="tabcontent">
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-sm-12 col-md-8 col-lg-9">
+                            <div class="sorting-options d-flex flex-wrap justify-content-between align-items-center mb-30">
+                              <span>Нийтэдээ 21 Аймаг</span>
+                              <select>
+                                <option selected="" value="0">Sort by latest</option>
+                                <option value="1">Sort by Popular</option>
+                                <option value="2">Sort by highest Price </option>
+                                <option value="3">Sort by lowest Price </option>
+                              </select>
+                            </div>
+                            <div class="row">
+                              <!-- Product item #1 -->
+                              <div class="col-sm-6 col-md-6 col-lg-4">
+                                <div class="product-item">
+                                  <div class="product__img">
+                                    <img src="{% static 'assets/images/duureg/bayngol.jpg' %}" alt="Product" loading="lazy">
+                                    <div class="product__action">
+                                      <a href="{% url 'service1'%}" class="btn btn__primary btn__rounded">
+                                        <i class="icon-arrow-right"></i> <span>Дэлгэрэнгүй</span>
+                                      </a>
+                                    </div><!-- /.product-action -->
+                                  </div><!-- /.product-img -->
+                                  <div class="product__info">
+                                    <h4 class="product__title"><a href="{% url 'service1'%}">Завхан</a></h4>
+                                    <span class="product__price">Дүүрэг</span>
+                                  </div><!-- /.product-content -->
+                                </div><!-- /.product-item -->
+                              </div><!-- /.col-lg-4 -->
+                              <!-- Product item #2 -->
+                              <div class="col-sm-6 col-md-6 col-lg-4">
+                                <div class="product-item">
+                                  <div class="product__img">
+                                    <img src="{% static 'assets/images/duureg/baganuur.jpeg' %}" alt="Product" loading="lazy">
+                                    <div class="product__action">
+                                      <a href="#" class="btn btn__primary btn__rounded">
+                                        <i class="icon-arrow-right"></i> <span>Дэлгэрэнгүй</span>
+                                      </a>
+                                    </div><!-- /.product-action -->
+                                  </div><!-- /.product-img -->
+                                  <div class="product__info">
+                                    <h4 class="product__title"><a href="#">Сонгинохайрхан</a></h4>
+                                    <span class="product__price">Дүүрэг</span>
+                                  </div><!-- /.product-content -->
+                                </div><!-- /.product-item -->
+                              </div><!-- /.col-lg-4 -->
+                              <!-- Product item #3 -->
+                              <div class="col-sm-6 col-md-6 col-lg-4">
+                                <div class="product-item">
+                                  <div class="product__img">
+                                    <img src="{% static 'assets/images/duureg/bagakhangai.jpg' %}" alt="Product" loading="lazy">
+                                    <div class="product__action">
+                                      <a href="#" class="btn btn__primary btn__rounded">
+                                        <i class="icon-arrow-right"></i> <span>Дэлгэрэнгүй</span>
+                                      </a>
+                                    </div><!-- /.product-action -->
+                                  </div><!-- /.product-img -->
+                                  <div class="product__info">
+                                    <h4 class="product__title"><a href="#">Хан уул</a></h4>
+                                    <span class="product__price">Дүүрэг</span>
+                                  </div><!-- /.product-content -->
+                                </div><!-- /.product-item -->
+                              </div><!-- /.col-lg-4 -->
+                              <!-- Product item #4 -->
+                              <div class="col-sm-6 col-md-6 col-lg-4">
+                                <div class="product-item">
+                                  <div class="product__img">
+                                    <img src="{% static 'assets/images/office.png' %}" alt="Product" loading="lazy">
+                                    <div class="product__action">
+                                      <a href="#" class="btn btn__primary btn__rounded">
+                                        <i class="icon-arrow-right"></i> <span>Дэлгэрэнгүй</span>
+                                      </a>
+                                    </div><!-- /.product-action -->
+                                  </div><!-- /.product-img -->
+                                  <div class="product__info">
+                                    <h4 class="product__title"><a href="#">Баянгол</a></h4>
+                                    <span class="product__price">Дүүрэг</span>
+                                  </div><!-- /.product-content -->
+                                </div><!-- /.product-item -->
+                              </div><!-- /.col-lg-4 -->
+                              <!-- Product item #5 -->
+                              <div class="col-sm-6 col-md-6 col-lg-4">
+                                <div class="product-item">
+                                  <div class="product__img">
+                                    <img src="{% static 'assets/images/office.png' %}" alt="Product" loading="lazy">
+                                    <div class="product__action">
+                                      <a href="#" class="btn btn__primary btn__rounded">
+                                        <i class="icon-arrow-right"></i> <span>Дэлгэрэнгүй</span>
+                                      </a>
+                                    </div><!-- /.product-action -->
+                                  </div><!-- /.product-img -->
+                                  <div class="product__info">
+                                    <h4 class="product__title"><a href="#">Баянзүрх</a></h4>
+                                    <span class="product__price">Дүүрэг</span>
+                                  </div><!-- /.product-content -->
+                                </div><!-- /.product-item -->
+                              </div><!-- /.col-lg-4 -->
+                              <!-- Product item #6 -->
+                              <div class="col-sm-6 col-md-6 col-lg-4">
+                                <div class="product-item">
+                                  <div class="product__img">
+                                    <img src="{% static 'assets/images/office.png' %}" alt="Product" loading="lazy">
+                                    <div class="product__action">
+                                      <a href="#" class="btn btn__primary btn__rounded">
+                                        <i class="icon-arrow-right"></i> <span>Дэлгэрэнгүй</span>
+                                      </a>
+                                    </div><!-- /.product-action -->
+                                  </div><!-- /.product-img -->
+                                  <div class="product__info">
+                                    <h4 class="product__title"><a href="#">Налайх</a></h4>
+                                    <span class="product__price">Дүүрэг</span>
+                                  </div><!-- /.product-content -->
+                                </div><!-- /.product-item -->
+                              </div><!-- /.col-lg-4 -->
+                              <!-- Product item #7 -->
+                              <div class="col-sm-6 col-md-6 col-lg-4">
+                                <div class="product-item">
+                                  <div class="product__img">
+                                    <img src="{% static 'assets/images/office.png' %}" alt="Product" loading="lazy">
+                                    <div class="product__action">
+                                      <a href="#" class="btn btn__primary btn__rounded">
+                                        <i class="icon-arrow-right"></i> <span>Дэлгэрэнгүй</span>
+                                      </a>
+                                    </div><!-- /.product-action -->
+                                  </div><!-- /.product-img -->
+                                  <div class="product__info">
+                                    <h4 class="product__title"><a href="#">Чингэлтэй</a></h4>
+                                    <span class="product__price">Дүүрэг</span>
+                                  </div><!-- /.product-content -->
+                                </div><!-- /.product-item -->
+                              </div><!-- /.col-lg-4 -->
+                              <!-- Product item #8 -->
+                              <div class="col-sm-6 col-md-6 col-lg-4">
+                                <div class="product-item">
+                                  <div class="product__img">
+                                    <img src="{% static 'assets/images/office.png' %}" alt="Product" loading="lazy">
+                                    <div class="product__action">
+                                      <a href="#" class="btn btn__primary btn__rounded">
+                                        <i class="icon-arrow-right"></i> <span>Дэлгэрэнгүй</span>
+                                      </a>
+                                    </div><!-- /.product-action -->
+                                  </div><!-- /.product-img -->
+                                  <div class="product__info">
+                                    <h4 class="product__title"><a href="#">Багануур</a></h4>
+                                    <span class="product__price">Дүүрэг</span>
+                                  </div><!-- /.product-content -->
+                                </div><!-- /.product-item -->
+                              </div><!-- /.col-lg-4 -->
+                              <!-- Product item #9 -->
+                              <div class="col-sm-6 col-md-6 col-lg-4">
+                                <div class="product-item">
+                                  <div class="product__img">
+                                    <img src="{% static 'assets/images/office.png' %}" alt="Product" loading="lazy">
+                                    <div class="product__action">
+                                      <a href="#" class="btn btn__primary btn__rounded">
+                                        <i class="icon-arrow-right"></i> <span>Дэлгэрэнгүй</span>
+                                      </a>
+                                    </div><!-- /.product-action -->
+                                  </div><!-- /.product-img -->
+                                  <div class="product__info">
+                                    <h4 class="product__title"><a href="#">Багахангай</a></h4>
+                                    <span class="product__price">Дүүрэг</span>
+                                  </div><!-- /.product-content -->
+                                </div><!-- /.product-item -->
+                              </div><!-- /.col-lg-4 -->
+                              <div class="col-sm-6 col-md-6 col-lg-4">
+                                <div class="product-item">
+                                  <div class="product__img">
+                                    <img src="{% static 'assets/images/office.png' %}" alt="Product" loading="lazy">
+                                    <div class="product__action">
+                                      <a href="{% url 'service1'%}" class="btn btn__primary btn__rounded">
+                                        <i class="icon-arrow-right"></i> <span>Дэлгэрэнгүй</span>
+                                      </a>
+                                    </div><!-- /.product-action -->
+                                  </div><!-- /.product-img -->
+                                  <div class="product__info">
+                                    <h4 class="product__title"><a href="{% url 'service1'%}">Сүхбаатар</a></h4>
+                                    <span class="product__price">Дүүрэг</span>
+                                  </div><!-- /.product-content -->
+                                </div><!-- /.product-item -->
+                              </div><!-- /.col-lg-4 -->
+                              <!-- Product item #2 -->
+                              <div class="col-sm-6 col-md-6 col-lg-4">
+                                <div class="product-item">
+                                  <div class="product__img">
+                                    <img src="{% static 'assets/images/office.png' %}" alt="Product" loading="lazy">
+                                    <div class="product__action">
+                                      <a href="#" class="btn btn__primary btn__rounded">
+                                        <i class="icon-arrow-right"></i> <span>Дэлгэрэнгүй</span>
+                                      </a>
+                                    </div><!-- /.product-action -->
+                                  </div><!-- /.product-img -->
+                                  <div class="product__info">
+                                    <h4 class="product__title"><a href="#">Сонгинохайрхан</a></h4>
+                                    <span class="product__price">Дүүрэг</span>
+                                  </div><!-- /.product-content -->
+                                </div><!-- /.product-item -->
+                              </div><!-- /.col-lg-4 -->
+                              <!-- Product item #3 -->
+                              <div class="col-sm-6 col-md-6 col-lg-4">
+                                <div class="product-item">
+                                  <div class="product__img">
+                                    <img src="{% static 'assets/images/office.png' %}" alt="Product" loading="lazy">
+                                    <div class="product__action">
+                                      <a href="#" class="btn btn__primary btn__rounded">
+                                        <i class="icon-arrow-right"></i> <span>Дэлгэрэнгүй</span>
+                                      </a>
+                                    </div><!-- /.product-action -->
+                                  </div><!-- /.product-img -->
+                                  <div class="product__info">
+                                    <h4 class="product__title"><a href="#">Хан уул</a></h4>
+                                    <span class="product__price">Дүүрэг</span>
+                                  </div><!-- /.product-content -->
+                                </div><!-- /.product-item -->
+                              </div><!-- /.col-lg-4 -->
+                              <!-- Product item #4 -->
+                              <div class="col-sm-6 col-md-6 col-lg-4">
+                                <div class="product-item">
+                                  <div class="product__img">
+                                    <img src="{% static 'assets/images/office.png' %}" alt="Product" loading="lazy">
+                                    <div class="product__action">
+                                      <a href="#" class="btn btn__primary btn__rounded">
+                                        <i class="icon-arrow-right"></i> <span>Дэлгэрэнгүй</span>
+                                      </a>
+                                    </div><!-- /.product-action -->
+                                  </div><!-- /.product-img -->
+                                  <div class="product__info">
+                                    <h4 class="product__title"><a href="#">Баянгол</a></h4>
+                                    <span class="product__price">Дүүрэг</span>
+                                  </div><!-- /.product-content -->
+                                </div><!-- /.product-item -->
+                              </div><!-- /.col-lg-4 -->
+                              <!-- Product item #5 -->
+                              <div class="col-sm-6 col-md-6 col-lg-4">
+                                <div class="product-item">
+                                  <div class="product__img">
+                                    <img src="{% static 'assets/images/office.png' %}" alt="Product" loading="lazy">
+                                    <div class="product__action">
+                                      <a href="#" class="btn btn__primary btn__rounded">
+                                        <i class="icon-arrow-right"></i> <span>Дэлгэрэнгүй</span>
+                                      </a>
+                                    </div><!-- /.product-action -->
+                                  </div><!-- /.product-img -->
+                                  <div class="product__info">
+                                    <h4 class="product__title"><a href="#">Баянзүрх</a></h4>
+                                    <span class="product__price">Дүүрэг</span>
+                                  </div><!-- /.product-content -->
+                                </div><!-- /.product-item -->
+                              </div><!-- /.col-lg-4 -->
+                              <!-- Product item #6 -->
+                              <div class="col-sm-6 col-md-6 col-lg-4">
+                                <div class="product-item">
+                                  <div class="product__img">
+                                    <img src="{% static 'assets/images/office.png' %}" alt="Product" loading="lazy">
+                                    <div class="product__action">
+                                      <a href="#" class="btn btn__primary btn__rounded">
+                                        <i class="icon-arrow-right"></i> <span>Дэлгэрэнгүй</span>
+                                      </a>
+                                    </div><!-- /.product-action -->
+                                  </div><!-- /.product-img -->
+                                  <div class="product__info">
+                                    <h4 class="product__title"><a href="#">Налайх</a></h4>
+                                    <span class="product__price">Дүүрэг</span>
+                                  </div><!-- /.product-content -->
+                                </div><!-- /.product-item -->
+                              </div><!-- /.col-lg-4 -->
+                              <!-- Product item #7 -->
+                              <div class="col-sm-6 col-md-6 col-lg-4">
+                                <div class="product-item">
+                                  <div class="product__img">
+                                    <img src="{% static 'assets/images/office.png' %}" alt="Product" loading="lazy">
+                                    <div class="product__action">
+                                      <a href="#" class="btn btn__primary btn__rounded">
+                                        <i class="icon-arrow-right"></i> <span>Дэлгэрэнгүй</span>
+                                      </a>
+                                    </div><!-- /.product-action -->
+                                  </div><!-- /.product-img -->
+                                  <div class="product__info">
+                                    <h4 class="product__title"><a href="#">Чингэлтэй</a></h4>
+                                    <span class="product__price">Дүүрэг</span>
+                                  </div><!-- /.product-content -->
+                                </div><!-- /.product-item -->
+                              </div><!-- /.col-lg-4 -->
+                              <!-- Product item #8 -->
+                            <!-- /.col-lg-4 -->
+                            </div><!-- /.row -->
+                           <!-- /.row -->
+                          </div><!-- /.col-lg-9 -->
+                        <!-- /.col-lg-3 -->
+                        </div><!-- /.row -->
+                      </div>
+                    </div>
+                  </div>
+                 
+                </div>
             </ul>
           
           </div><!-- /.widget-content -->
@@ -469,368 +771,7 @@
 </div><!-- /.container -->
 </section>
             </div>
-            <div id="Paris" class="tabcontent">
-              <h3>Аймагууд</h3>
-              <div class="container">
-                <div class="row">
-                  <div class="col-sm-12 col-md-8 col-lg-9">
-                    <div class="sorting-options d-flex flex-wrap justify-content-between align-items-center mb-30">
-                      <span>Нийтэдээ 21 Аймаг</span>
-                      <select>
-                        <option selected="" value="0">Sort by latest</option>
-                        <option value="1">Sort by Popular</option>
-                        <option value="2">Sort by highest Price </option>
-                        <option value="3">Sort by lowest Price </option>
-                      </select>
-                    </div>
-                    <div class="row">
-                      <!-- Product item #1 -->
-                      <div class="col-sm-6 col-md-6 col-lg-4">
-                        <div class="product-item">
-                          <div class="product__img">
-                            <img src="{% static 'assets/images/duureg/bayngol.jpg' %}" alt="Product" loading="lazy">
-                            <div class="product__action">
-                              <a href="{% url 'service1'%}" class="btn btn__primary btn__rounded">
-                                <i class="icon-arrow-right"></i> <span>Дэлгэрэнгүй</span>
-                              </a>
-                            </div><!-- /.product-action -->
-                          </div><!-- /.product-img -->
-                          <div class="product__info">
-                            <h4 class="product__title"><a href="{% url 'service1'%}">Сүхбаатар</a></h4>
-                            <span class="product__price">Дүүрэг</span>
-                          </div><!-- /.product-content -->
-                        </div><!-- /.product-item -->
-                      </div><!-- /.col-lg-4 -->
-                      <!-- Product item #2 -->
-                      <div class="col-sm-6 col-md-6 col-lg-4">
-                        <div class="product-item">
-                          <div class="product__img">
-                            <img src="{% static 'assets/images/duureg/baganuur.jpeg' %}" alt="Product" loading="lazy">
-                            <div class="product__action">
-                              <a href="#" class="btn btn__primary btn__rounded">
-                                <i class="icon-arrow-right"></i> <span>Дэлгэрэнгүй</span>
-                              </a>
-                            </div><!-- /.product-action -->
-                          </div><!-- /.product-img -->
-                          <div class="product__info">
-                            <h4 class="product__title"><a href="#">Сонгинохайрхан</a></h4>
-                            <span class="product__price">Дүүрэг</span>
-                          </div><!-- /.product-content -->
-                        </div><!-- /.product-item -->
-                      </div><!-- /.col-lg-4 -->
-                      <!-- Product item #3 -->
-                      <div class="col-sm-6 col-md-6 col-lg-4">
-                        <div class="product-item">
-                          <div class="product__img">
-                            <img src="{% static 'assets/images/duureg/bagakhangai.jpg' %}" alt="Product" loading="lazy">
-                            <div class="product__action">
-                              <a href="#" class="btn btn__primary btn__rounded">
-                                <i class="icon-arrow-right"></i> <span>Дэлгэрэнгүй</span>
-                              </a>
-                            </div><!-- /.product-action -->
-                          </div><!-- /.product-img -->
-                          <div class="product__info">
-                            <h4 class="product__title"><a href="#">Хан уул</a></h4>
-                            <span class="product__price">Дүүрэг</span>
-                          </div><!-- /.product-content -->
-                        </div><!-- /.product-item -->
-                      </div><!-- /.col-lg-4 -->
-                      <!-- Product item #4 -->
-                      <div class="col-sm-6 col-md-6 col-lg-4">
-                        <div class="product-item">
-                          <div class="product__img">
-                            <img src="{% static 'assets/images/office.png' %}" alt="Product" loading="lazy">
-                            <div class="product__action">
-                              <a href="#" class="btn btn__primary btn__rounded">
-                                <i class="icon-arrow-right"></i> <span>Дэлгэрэнгүй</span>
-                              </a>
-                            </div><!-- /.product-action -->
-                          </div><!-- /.product-img -->
-                          <div class="product__info">
-                            <h4 class="product__title"><a href="#">Баянгол</a></h4>
-                            <span class="product__price">Дүүрэг</span>
-                          </div><!-- /.product-content -->
-                        </div><!-- /.product-item -->
-                      </div><!-- /.col-lg-4 -->
-                      <!-- Product item #5 -->
-                      <div class="col-sm-6 col-md-6 col-lg-4">
-                        <div class="product-item">
-                          <div class="product__img">
-                            <img src="{% static 'assets/images/office.png' %}" alt="Product" loading="lazy">
-                            <div class="product__action">
-                              <a href="#" class="btn btn__primary btn__rounded">
-                                <i class="icon-arrow-right"></i> <span>Дэлгэрэнгүй</span>
-                              </a>
-                            </div><!-- /.product-action -->
-                          </div><!-- /.product-img -->
-                          <div class="product__info">
-                            <h4 class="product__title"><a href="#">Баянзүрх</a></h4>
-                            <span class="product__price">Дүүрэг</span>
-                          </div><!-- /.product-content -->
-                        </div><!-- /.product-item -->
-                      </div><!-- /.col-lg-4 -->
-                      <!-- Product item #6 -->
-                      <div class="col-sm-6 col-md-6 col-lg-4">
-                        <div class="product-item">
-                          <div class="product__img">
-                            <img src="{% static 'assets/images/office.png' %}" alt="Product" loading="lazy">
-                            <div class="product__action">
-                              <a href="#" class="btn btn__primary btn__rounded">
-                                <i class="icon-arrow-right"></i> <span>Дэлгэрэнгүй</span>
-                              </a>
-                            </div><!-- /.product-action -->
-                          </div><!-- /.product-img -->
-                          <div class="product__info">
-                            <h4 class="product__title"><a href="#">Налайх</a></h4>
-                            <span class="product__price">Дүүрэг</span>
-                          </div><!-- /.product-content -->
-                        </div><!-- /.product-item -->
-                      </div><!-- /.col-lg-4 -->
-                      <!-- Product item #7 -->
-                      <div class="col-sm-6 col-md-6 col-lg-4">
-                        <div class="product-item">
-                          <div class="product__img">
-                            <img src="{% static 'assets/images/office.png' %}" alt="Product" loading="lazy">
-                            <div class="product__action">
-                              <a href="#" class="btn btn__primary btn__rounded">
-                                <i class="icon-arrow-right"></i> <span>Дэлгэрэнгүй</span>
-                              </a>
-                            </div><!-- /.product-action -->
-                          </div><!-- /.product-img -->
-                          <div class="product__info">
-                            <h4 class="product__title"><a href="#">Чингэлтэй</a></h4>
-                            <span class="product__price">Дүүрэг</span>
-                          </div><!-- /.product-content -->
-                        </div><!-- /.product-item -->
-                      </div><!-- /.col-lg-4 -->
-                      <!-- Product item #8 -->
-                      <div class="col-sm-6 col-md-6 col-lg-4">
-                        <div class="product-item">
-                          <div class="product__img">
-                            <img src="{% static 'assets/images/office.png' %}" alt="Product" loading="lazy">
-                            <div class="product__action">
-                              <a href="#" class="btn btn__primary btn__rounded">
-                                <i class="icon-arrow-right"></i> <span>Дэлгэрэнгүй</span>
-                              </a>
-                            </div><!-- /.product-action -->
-                          </div><!-- /.product-img -->
-                          <div class="product__info">
-                            <h4 class="product__title"><a href="#">Багануур</a></h4>
-                            <span class="product__price">Дүүрэг</span>
-                          </div><!-- /.product-content -->
-                        </div><!-- /.product-item -->
-                      </div><!-- /.col-lg-4 -->
-                      <!-- Product item #9 -->
-                      <div class="col-sm-6 col-md-6 col-lg-4">
-                        <div class="product-item">
-                          <div class="product__img">
-                            <img src="{% static 'assets/images/office.png' %}" alt="Product" loading="lazy">
-                            <div class="product__action">
-                              <a href="#" class="btn btn__primary btn__rounded">
-                                <i class="icon-arrow-right"></i> <span>Дэлгэрэнгүй</span>
-                              </a>
-                            </div><!-- /.product-action -->
-                          </div><!-- /.product-img -->
-                          <div class="product__info">
-                            <h4 class="product__title"><a href="#">Багахангай</a></h4>
-                            <span class="product__price">Дүүрэг</span>
-                          </div><!-- /.product-content -->
-                        </div><!-- /.product-item -->
-                      </div><!-- /.col-lg-4 -->
-                      <div class="col-sm-6 col-md-6 col-lg-4">
-                        <div class="product-item">
-                          <div class="product__img">
-                            <img src="{% static 'assets/images/office.png' %}" alt="Product" loading="lazy">
-                            <div class="product__action">
-                              <a href="{% url 'service1'%}" class="btn btn__primary btn__rounded">
-                                <i class="icon-arrow-right"></i> <span>Дэлгэрэнгүй</span>
-                              </a>
-                            </div><!-- /.product-action -->
-                          </div><!-- /.product-img -->
-                          <div class="product__info">
-                            <h4 class="product__title"><a href="{% url 'service1'%}">Сүхбаатар</a></h4>
-                            <span class="product__price">Дүүрэг</span>
-                          </div><!-- /.product-content -->
-                        </div><!-- /.product-item -->
-                      </div><!-- /.col-lg-4 -->
-                      <!-- Product item #2 -->
-                      <div class="col-sm-6 col-md-6 col-lg-4">
-                        <div class="product-item">
-                          <div class="product__img">
-                            <img src="{% static 'assets/images/office.png' %}" alt="Product" loading="lazy">
-                            <div class="product__action">
-                              <a href="#" class="btn btn__primary btn__rounded">
-                                <i class="icon-arrow-right"></i> <span>Дэлгэрэнгүй</span>
-                              </a>
-                            </div><!-- /.product-action -->
-                          </div><!-- /.product-img -->
-                          <div class="product__info">
-                            <h4 class="product__title"><a href="#">Сонгинохайрхан</a></h4>
-                            <span class="product__price">Дүүрэг</span>
-                          </div><!-- /.product-content -->
-                        </div><!-- /.product-item -->
-                      </div><!-- /.col-lg-4 -->
-                      <!-- Product item #3 -->
-                      <div class="col-sm-6 col-md-6 col-lg-4">
-                        <div class="product-item">
-                          <div class="product__img">
-                            <img src="{% static 'assets/images/office.png' %}" alt="Product" loading="lazy">
-                            <div class="product__action">
-                              <a href="#" class="btn btn__primary btn__rounded">
-                                <i class="icon-arrow-right"></i> <span>Дэлгэрэнгүй</span>
-                              </a>
-                            </div><!-- /.product-action -->
-                          </div><!-- /.product-img -->
-                          <div class="product__info">
-                            <h4 class="product__title"><a href="#">Хан уул</a></h4>
-                            <span class="product__price">Дүүрэг</span>
-                          </div><!-- /.product-content -->
-                        </div><!-- /.product-item -->
-                      </div><!-- /.col-lg-4 -->
-                      <!-- Product item #4 -->
-                      <div class="col-sm-6 col-md-6 col-lg-4">
-                        <div class="product-item">
-                          <div class="product__img">
-                            <img src="{% static 'assets/images/office.png' %}" alt="Product" loading="lazy">
-                            <div class="product__action">
-                              <a href="#" class="btn btn__primary btn__rounded">
-                                <i class="icon-arrow-right"></i> <span>Дэлгэрэнгүй</span>
-                              </a>
-                            </div><!-- /.product-action -->
-                          </div><!-- /.product-img -->
-                          <div class="product__info">
-                            <h4 class="product__title"><a href="#">Баянгол</a></h4>
-                            <span class="product__price">Дүүрэг</span>
-                          </div><!-- /.product-content -->
-                        </div><!-- /.product-item -->
-                      </div><!-- /.col-lg-4 -->
-                      <!-- Product item #5 -->
-                      <div class="col-sm-6 col-md-6 col-lg-4">
-                        <div class="product-item">
-                          <div class="product__img">
-                            <img src="{% static 'assets/images/office.png' %}" alt="Product" loading="lazy">
-                            <div class="product__action">
-                              <a href="#" class="btn btn__primary btn__rounded">
-                                <i class="icon-arrow-right"></i> <span>Дэлгэрэнгүй</span>
-                              </a>
-                            </div><!-- /.product-action -->
-                          </div><!-- /.product-img -->
-                          <div class="product__info">
-                            <h4 class="product__title"><a href="#">Баянзүрх</a></h4>
-                            <span class="product__price">Дүүрэг</span>
-                          </div><!-- /.product-content -->
-                        </div><!-- /.product-item -->
-                      </div><!-- /.col-lg-4 -->
-                      <!-- Product item #6 -->
-                      <div class="col-sm-6 col-md-6 col-lg-4">
-                        <div class="product-item">
-                          <div class="product__img">
-                            <img src="{% static 'assets/images/office.png' %}" alt="Product" loading="lazy">
-                            <div class="product__action">
-                              <a href="#" class="btn btn__primary btn__rounded">
-                                <i class="icon-arrow-right"></i> <span>Дэлгэрэнгүй</span>
-                              </a>
-                            </div><!-- /.product-action -->
-                          </div><!-- /.product-img -->
-                          <div class="product__info">
-                            <h4 class="product__title"><a href="#">Налайх</a></h4>
-                            <span class="product__price">Дүүрэг</span>
-                          </div><!-- /.product-content -->
-                        </div><!-- /.product-item -->
-                      </div><!-- /.col-lg-4 -->
-                      <!-- Product item #7 -->
-                      <div class="col-sm-6 col-md-6 col-lg-4">
-                        <div class="product-item">
-                          <div class="product__img">
-                            <img src="{% static 'assets/images/office.png' %}" alt="Product" loading="lazy">
-                            <div class="product__action">
-                              <a href="#" class="btn btn__primary btn__rounded">
-                                <i class="icon-arrow-right"></i> <span>Дэлгэрэнгүй</span>
-                              </a>
-                            </div><!-- /.product-action -->
-                          </div><!-- /.product-img -->
-                          <div class="product__info">
-                            <h4 class="product__title"><a href="#">Чингэлтэй</a></h4>
-                            <span class="product__price">Дүүрэг</span>
-                          </div><!-- /.product-content -->
-                        </div><!-- /.product-item -->
-                      </div><!-- /.col-lg-4 -->
-                      <!-- Product item #8 -->
-                      <div class="col-sm-6 col-md-6 col-lg-4">
-                        <div class="product-item">
-                          <div class="product__img">
-                            <img src="{% static 'assets/images/office.png' %}" alt="Product" loading="lazy">
-                            <div class="product__action">
-                              <a href="#" class="btn btn__primary btn__rounded">
-                                <i class="icon-arrow-right"></i> <span>Дэлгэрэнгүй</span>
-                              </a>
-                            </div><!-- /.product-action -->
-                          </div><!-- /.product-img -->
-                          <div class="product__info">
-                            <h4 class="product__title"><a href="#">Багануур</a></h4>
-                            <span class="product__price">Дүүрэг</span>
-                          </div><!-- /.product-content -->
-                        </div><!-- /.product-item -->
-                      </div><!-- /.col-lg-4 -->
-                      <!-- Product item #9 -->
-                      <div class="col-sm-6 col-md-6 col-lg-4">
-                      <div class="col-sm-6 col-md-6 col-lg-4">
-                        <div class="product-item">
-                          <div class="product__img">
-                            <img src="{% static 'assets/images/office.png' %}" alt="Product" loading="lazy">
-                            <div class="product__action">
-                              <a href="#" class="btn btn__primary btn__rounded">
-                                <i class="icon-arrow-right"></i> <span>Дэлгэрэнгүй</span>
-                              </a>
-                            </div><!-- /.product-action -->
-                          </div><!-- /.product-img -->
-                          <div class="product__info">
-                            <h4 class="product__title"><a href="#">Чингэлтэй</a></h4>
-                            <span class="product__price">Дүүрэг</span>
-                          </div><!-- /.product-content -->
-                        </div><!-- /.product-item -->
-                      </div><!-- /.col-lg-4 -->
-                      <!-- Product item #8 -->
-                      <div class="col-sm-6 col-md-6 col-lg-4">
-                        <div class="product-item">
-                          <div class="product__img">
-                            <img src="{% static 'assets/images/office.png' %}" alt="Product" loading="lazy">
-                            <div class="product__action">
-                              <a href="#" class="btn btn__primary btn__rounded">
-                                <i class="icon-arrow-right"></i> <span>Дэлгэрэнгүй</span>
-                              </a>
-                            </div><!-- /.product-action -->
-                          </div><!-- /.product-img -->
-                          <div class="product__info">
-                            <h4 class="product__title"><a href="#">Багануур</a></h4>
-                            <span class="product__price">Дүүрэг</span>
-                          </div><!-- /.product-content -->
-                        </div><!-- /.product-item -->
-                      </div><!-- /.col-lg-4 -->
-                      <!-- Product item #9 -->
-                      <div class="col-sm-6 col-md-6 col-lg-4">
-                        <div class="product-item">
-                          <div class="product__img">
-                            <img src="{% static 'assets/images/office.png' %}" alt="Product" loading="lazy">
-                            <div class="product__action">
-                              <a href="#" class="btn btn__primary btn__rounded">
-                                <i class="icon-arrow-right"></i> <span>Дэлгэрэнгүй</span>
-                              </a>
-                            </div><!-- /.product-action -->
-                          </div><!-- /.product-img -->
-                          <div class="product__info">
-                            <h4 class="product__title"><a href="#">Багахангай</a></h4>
-                            <span class="product__price">Дүүрэг</span>
-                          </div><!-- /.product-content -->
-                        </div><!-- /.product-item -->
-                      </div><!-- /.col-lg-4 -->
-                    </div><!-- /.row -->
-                   <!-- /.row -->
-                  </div><!-- /.col-lg-9 -->
-                <!-- /.col-lg-3 -->
-                </div><!-- /.row -->
-              </div>
-            </div>
+           
             
         
           

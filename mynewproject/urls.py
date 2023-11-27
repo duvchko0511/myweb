@@ -1,7 +1,9 @@
 from django.urls import path
 from mynewapp import views
+from django.contrib import admin
 
 urlpatterns = [
+    path('admin/', admin.site.urls),
     path('', views.mynewapp, name='index'),
     path('about/', views.about, name='about'),
     path('contact/', views.contact, name='contact'),
@@ -15,6 +17,8 @@ urlpatterns = [
     path('signup/', views.signup, name='signup'),
     path('horoo/', views.horoo, name='horoo'),
     path('zahialagch/', views.zahialagch, name='zahialagch'),
-    path('huduu/', views.huduu, name='huduu')
+    path('huduu/', views.huduu, name='huduu'),
+    
+ 
     # Other URL patterns
 ]
