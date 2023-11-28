@@ -18,6 +18,8 @@ urlpatterns = [
     path('horoo/', views.horoo, name='horoo'),
     path('zahialagch/', views.zahialagch, name='zahialagch'),
     path('huduu/', views.huduu, name='huduu'),
+    path('bayangol/', views.bayangol, name='bayangol'),
+    path('uilchilgee1/', views.uilchilgee1, name='uilchilgee1')
     
  
     # Other URL patterns

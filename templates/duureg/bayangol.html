@@ -1,0 +1,579 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="description" content="Medcity - Medical Healthcare HTML5 Template">
+  <link href="assets/images/favicon/favicon.png" rel="icon">
+  <title>Монгол хаяг</title>
+
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Roboto:wght@400;700&display=swap">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
+  <link rel="stylesheet" href="{% static 'assets/css/libraries.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/css/cate.css' %}">
+</head>
+
+<body>s
+  <div class="wrapper">
+    <div class="preloader">
+      <div class="loading"><span></span><span></span><span></span><span></span></div>
+    </div><!-- /.preloader -->
+
+    <!-- =========================
+        Header
+    =========================== -->
+    <header class="header header-layout1">
+      <div class="header-topbar">
+        <div class="container-fluid">
+          <div class="row align-items-center">
+            <div class="col-12">
+              <div class="d-flex align-items-center justify-content-between">
+                <ul class="contact__list d-flex flex-wrap align-items-center list-unstyled mb-0">
+                  <li>
+                    <button class="miniPopup-emergency-trigger" type="button">24/7 үйлчилгээ</button>
+                    <div id="miniPopup-emergency" class="miniPopup miniPopup-emergency text-center">
+                      <div class="emergency__icon">
+                        <i class="icon-call3"></i>
+                      </div>
+                      <a href="tel:+201061245741" class="phone__number">
+                        <i class="icon-phone"></i> <span>+2 01061245741</span>
+                      </a>
+                      <p>Please feel free to contact our friendly reception staff with any general or medical enquiry.
+                      </p>
+                      <a href="appointment.html" class="btn btn__secondary btn__link btn__block">
+                        <span>Мэдэээлэл харах</span> <i class="icon-arrow-right"></i>
+                      </a>
+                    </div><!-- /.miniPopup-emergency -->
+                  </li>
+                  <li>
+                    <i class="icon-phone"></i><a href="tel:+5565454117">Emergency Line: (002) 01061245741</a>
+                  </li>
+                  <li>
+                    <i class="icon-location"></i><a href="#">Location: Brooklyn, New York</a>
+                  </li>
+                  <li>
+                    <i class="icon-clock"></i><a href="contact-us.html">Mon - Fri: 8:00 am - 7:00 pm</a>
+                  </li>
+                </ul><!-- /.contact__list -->
+                <div class="d-flex">
+                  <ul class="social-icons list-unstyled mb-0 mr-30">
+                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                  </ul><!-- /.social-icons -->
+                  <form class="header-topbar__search">
+                    <input type="text" class="form-control" placeholder="Search...">
+                    <button class="header-topbar__search-btn"><i class="fa fa-search"></i></button>
+                  </form>
+                </div>
+              </div>
+            </div><!-- /.col-12 -->
+          </div><!-- /.row -->
+        </div><!-- /.container -->
+      </div><!-- /.header-top -->
+      <nav class="navbar navbar-expand-lg sticky-navbar">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">
+            <img src="assets/images/logo/logo-light.png" class="logo-light" alt="logo">
+            <img src="assets/images/logo/logo-dark.png" class="logo-dark" alt="logo">
+          </a>
+          <button class="navbar-toggler" type="button">
+            <span class="menu-lines"><span></span></span>
+          </button>
+          <div class="collapse navbar-collapse" id="mainNavigation">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav__item">
+                <a href="{% url 'index' %}" class="nav__item-link">Home</a>
+              </li>
+              <li class="nav__item has-dropdown">
+                <a href="#" data-toggle="dropdown" class="dropdown-toggle nav__item-link">Бидний тухай</a>
+                <ul class="dropdown-menu">
+                  <li class="nav__item">
+                    <a href="{% url 'about' %}" class="nav__item-link">About Us</a>
+                  </li>
+                  <li class="nav__item">
+                    <a href="services.html" class="nav__item-link">Манай үйл ажиллагаа</a>
+                  </li>
+                   <li class="nav__item">
+                    <a href="services-single.html" class="nav__item-link">single Services</a>
+                  </li> 
+                   <li class="nav__item">
+                    
+                    <a href="pricing.html" class="nav__item-link">Pricing & Plans</a>
+                  </li>
+                  <li class="nav__item">
+                    <a href="appointment.html" class="nav__item-link">Appointments</a>
+                  </li>
+                  <li class="nav__item">
+                    <a href="faqs.html" class="nav__item-link">Help & FAQs</a>
+                  </li> 
+                  <li class="nav__item">
+                    <a href="gallery.html" class="nav__item-link">Our Gallery</a>
+                  </li> 
+                </ul>
+              </li>
+              
+              <li class="nav__item">
+                <a href="index" class="nav__item-link">Зөвлөмж</a>
+              </li>
+             <li class="nav__item has-dropdown">
+                <a href="#" data-toggle="dropdown" class="dropdown-toggle nav__item-link">Shop</a>
+                <ul class="dropdown-menu">
+                  <li class="nav__item">
+                    <a href="shop" class="nav__item-link">Our Products</a>
+                  </li>
+                  <li class="nav__item">
+                    <a href="shopsingel" class="nav__item-link">Products Single</a>
+                  </li>
+                  <li class="nav__item">
+                    <a href="cart" class="nav__item-link">Cart</a>
+                  </li>
+                </ul>
+              </li> 
+              <li class="nav__item">
+                <a href="{% url 'contact' %}" class="nav__item-link">Хаяг байршил</a>
+              </li><!-- /.nav-item -->
+            </ul><!-- /.navbar-nav -->
+            <button class="close-mobile-menu d-block d-lg-none"><i class="fas fa-times"></i></button>
+          </div><!-- /.navbar-collapse -->
+           <div class="d-none d-xl-flex align-items-center position-relative ml-30">
+            <div class="miniPopup-departments-trigger">
+              <span class="menu-lines" id="miniPopup-departments-trigger-icon"><span></span></span>
+              <a href="departments.html">Departments</a>
+            </div>
+        </div><!-- /.container -->
+      </nav><!-- /.navabr -->
+    </header><!-- /.Header -->
+
+    <!-- ========================
+       page title 
+    =========================== -->
+    <section class="page-title page-title-layout2 bg-overlay text-center pb-0">
+      <div class="bg-img"><img src="{% static 'assets/images/sliders/slide2.jpg' %}" alt="background"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-8 offset-xl-2">
+            <!-- <div class="pagetitle__icon">
+              <i class="icon-microscope"></i>
+            </div> -->
+            <h1 class="pagetitle__heading">Сүхбаатар дүүрэг</h1>
+            <p class="pagetitle__desc mb-30">Улаанбаатар хотын төвд орших тус дүүрэг 21.8 мянган га газар нутагтай, 2010 оны эцсээр 20 хороо, 36,165 өрхтэй, 136,891 хүн амтай байв. 
+              Үүний хамт тус дүүрэгт нийслэлийн төр, засаг, соёл боловсрол, шинжлэх ухааны төв байгууллагууд төвлөрөн үйл ажиллагаа явуулж байдаг онцлогтой.
+            </p>
+            <a href="#content" class="scroll-down"><i class="fas fa-long-arrow-alt-down"></i></a>
+          </div><!-- /.col-xl-8 -->
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section><!-- /.page-title -->
+
+    <section id="content" class=" pb-80">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-8">
+            <div class="text-block mb-50">
+             <!-- /.video-banner -->
+              <p class="text-block__desc mb-20">1965 онд  БНМАУ-ын Ардын Их Хурлын Тэргүүлэгчдийн 79 дүгээр тогтоолоор Сүхбаатарын район 
+                анх 44 хороотой байгуулагдахад одоогийн байрнуудаас 
+                I хороонд 61 дүгээр байр, II хороонд 23, 24, 25 байрууд харьяалагдаж байв. 1992 онд шинэ Үндсэн хуулийн дагуу Засаг захиргааны
+                 нэгжийн өөрчлөлтөөр хуучин Сүхбаатарын районы
+                 I хорооны 61 дүгээр байрнаас бусад байр нь Чингэлтэй дүүрэгт орж, 
+               </p>
+              <p class="text-block__desc mb-20">  Сүхбаатарын районы II хорооноос 1, 2, 4, 5, 23, 24, 25, 33 дугаар байруудыг салган одоогийн үндсэн дүр 
+                төрх байдалтайгаар Сүхбаатар дүүргийн I хороо болгон зохион байгуулсан байна.</p>
+            </div><!-- /.text-block -->
+
+           <!-- <ul class="list-items list-unstyled mb-60 pl-40">
+              <li>If your blood doesn’t clot properly – it’s a haematologist who will conduct the blood tests, confirm
+                if you have haemophilia, and offer treatment.</li>
+              <li>When there’s an outbreak of infection in a hospital, it’s a medical microbiologist or infection doctor
+                who will advise the infection control teams and work hard to contain it.</li>
+              <li>For those having trouble getting pregnant – it’s a reproductive scientist who will investigate,
+                diagnose and, where possible, treat any infertility issues.</li>
+            </ul> -->
+         <!-- /.text-block -->
+          <!---->  <div class="row">
+              <div class="collg-12 col-md-6">
+                <div class="pricing-widget-layout1 mb-70">
+                  <h5 class="pricing__title">Цэцэрлэг</h5>
+                  <ul class="pricing__list list-unstyled mb-0">
+                    <li><span>Umbilical Cord Appearance</span><span class="price">50</span></li>
+                    <li><span>Cardiac Electrophysiology</span><span class="price">45</span></li>
+                    <li><span>Repositioning Techniques</span><span class="price">60</span></li>
+                    <li><span>Geriatric Neurology</span><span class="price">65</span></li>
+                    <li><span>Nuclear Cardiology</span><span class="price">40</span></li>
+                    <li><span>Nuclear Cardiology</span><span class="price">55</span></li>
+                  </ul>
+                </div>
+              </div><!-- /.col-md-6 -->
+              <div class="collg-12 col-md-6">
+                <div class="pricing-widget-layout2 mb-70">
+                  <h5 class="pricing__title">Сургууль</h5>
+                  <ul class="pricing__list list-unstyled mb-0">
+                    <li><span>Colonoscopy</span><span class="price">50</span></li>
+                    <li><span>Allergy testing</span><span class="price">45</span></li>
+                    <li><span>Gastroscopy</span><span class="price">60</span></li>
+                    <li><span>Bronchoscopy</span><span class="price">65</span></li>
+                    <li><span>Cardiac Ablation</span><span class="price">40</span></li>
+                    <li><span>Holter monitoring</span><span class="price">55</span></li>
+                  </ul>
+                </div>
+              </div><!-- /.col-md-6 -->
+            </div><!-- /.row -->
+            <!-- ======================
+                 Team
+             ========================= -->
+            <section class="team-layout2 pt-0 pb-30">
+              <div class="heading mb-40">
+                <h3 class="heading__title">Аж ахуй нэгжүүд
+                </h3>
+                <p class="heading__desc">Our administration and support staff all have exceptional people skills and
+                  trained to assist you with all medical enquiries.
+                </p>
+              </div><!-- /.heading -->
+              <div class="slick-carousel"
+                data-slick='{"slidesToShow": 3, "slidesToScroll": 1, "autoplay": true, "arrows": false, "dots": false, "responsive": [ {"breakpoint": 992, "settings": {"slidesToShow": 2}}, {"breakpoint": 767, "settings": {"slidesToShow": 1}}, {"breakpoint": 480, "settings": {"slidesToShow": 1}}]}'>
+                <!-- Member #1 -->
+                <div class="member">
+                  <div class="member__img">
+                    <img src="{% static 'assets/images/team/damba.jpg' %}" alt="member img">
+                  </div><!-- /.member-img -->
+                  <div class="member__info">
+                    <h5 class="member__name"><a href="doctors-single-doctor1.html">Дамбадаржаа</a></h5>
+                    <p class="member__job">хийд</p>
+                  </div><!-- /.member-info -->
+                </div><!-- /.member -->
+                <!-- Member #2 -->
+                <div class="member">
+                  <div class="member__img">
+                    <img src="{% static 'assets/images/team/ihdelguur.jpg' %}" alt="member img">
+                  </div><!-- /.member-img -->
+                  <div class="member__info">
+                    <h5 class="member__name"><a href="doctors-single-doctor1.html">Их дэлгүүр</a></h5>
+                    <p class="member__job">дэлгүүр</p>
+                  </div><!-- /.member-info -->
+                </div><!-- /.member -->
+                <!-- Member #3 -->
+                <div class="member">
+                  <div class="member__img">
+                    <img src="{% static 'assets/images/team/miniidelguur.jpg' %}" alt="member img">
+                  </div><!-- /.member-img -->
+                  <div class="member__info">
+                    <h5 class="member__name"><a href="doctors-single-doctor1.html">Миний дэлгүүр</a></h5>
+                    <p class="member__job">дэлгүүр</p>
+                  </div><!-- /.member-info -->
+                </div><!-- /.member -->
+                <!-- Member #4 -->
+                <div class="member">
+                  <div class="member__img">
+                    <img src="{% static 'assets/images/team/nissabmotor.jpg' %}" alt="member img">
+                  </div><!-- /.member-img -->
+                  <div class="member__info">
+                    <h5 class="member__name"><a href="doctors-single-doctor1.html">Ниссан моторс</a></h5>
+                    <p class="member__job">Авто</p>
+                  </div><!-- /.member-info -->
+                </div><!-- /.member -->
+                <!-- Member #5 -->
+                <div class="member">
+                  <div class="member__img">
+                    <img src="{% static 'assets/images/team/ulsiin.jpg' %}" alt="member img">
+                  </div><!-- /.member-img -->
+                  <div class="member__info">
+                    <h5 class="member__name"><a href="doctors-single-doctor1.html"> Улсын төв номын сан</a></h5>
+                    <p class="member__job">Номын сан</p>
+                  </div><!-- /.member-info -->
+                </div><!-- /.member -->
+                <!-- Member #6 -->
+                <div class="member">
+                  <div class="member__img">
+                    <img src="{% static 'assets/images/team/tsirk.jpg' %}" alt="member img">
+                  </div><!-- /.member-img -->
+                  <div class="member__info">
+                    <h5 class="member__name"><a href="doctors-single-doctor1.html">Цирк</a></h5>
+                    <p class="member__job">Соёл </p>
+                  </div><!-- /.member-info -->
+                </div><!-- /.member -->
+              </div><!-- /.carousel -->
+            </section><!-- /.Team -->
+          </div><!-- /.col-lg-8 -->
+          <div class="col-sm-12 col-md-12 col-lg-4">
+            <aside class="sidebar has-marign-left sticky-top">
+              <div class="widget widget-services">
+                <h5 class="widget__title">Дүүргийн хороод</h5>
+                <div class="widget-content">
+                  <ul class="list-unstyled mb-0">
+                    <li><a href="{% url 'horoo' %}"><span>1-р хороо</span><i class="icon-arrow-right"></i></a></li>
+                    <li><a href="#"><span>2-р хороо</span><i class="icon-arrow-right"></i></a></li>
+                    <li><a href="#"><span>3-р хороо</span><i class="icon-arrow-right"></i></a></li>
+                    <li><a href="#"><span>4-р хороо</span><i class="icon-arrow-right"></i></a></li>
+                    <li><a href="#"><span>5-р хороо</span><i class="icon-arrow-right"></i></a></li>
+                    <li><a href="#"><span>6-р хороо</span><i class="icon-arrow-right"></i></a></li>
+                    <li><a href="#"><span>7-р хороо</span><i class="icon-arrow-right"></i></a></li>
+                    <li><a href="#"><span>8-р хороо</span><i class="icon-arrow-right"></i></a></li>
+                    <li><a href="#"><span>9-р хороо</span><i class="icon-arrow-right"></i></a></li>
+                    <li><a href="#"><span>10-р хороо</span><i class="icon-arrow-right"></i></a></li>
+                    <li><a href="#"><span>11-р хороо</span><i class="icon-arrow-right"></i></a></li>
+                    <li><a href="#"><span>12-р хороо</span><i class="icon-arrow-right"></i></a></li>
+                    <li><a href="#"><span>13-р хороо</span><i class="icon-arrow-right"></i></a></li>
+                    <li><a href="#"><span>14-р хороо</span><i class="icon-arrow-right"></i></a></li>
+                  </ul>
+                </div><!-- /.widget-content -->
+              </div><!-- /.widget-services -->
+              <div class="widget widget-help bg-overlay bg-overlay-secondary-gradient">
+                <div class="bg-img"><img src="assets/images/banners/5.jpg" alt="background"></div>
+               
+            </aside><!-- /.sidebar -->
+          </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section>
+    
+    <section class="features-layout4 py-0">
+        <div class="heading__layout2">
+            <h3 class="heading__title">Төрийн үйлчилгээ - Иргэн танд</h3>
+          </div>
+        <div class="row">
+            <!-- Feature item #1 -->
+            <div class="col-sm-6 col-md-6 col-lg-3">
+              <div class="feature-item">
+                <div class="feature__content">
+                    <div class="single-list-topics-icon">
+                        <img src="{% static 'assets/images/ZRG/ulsiin-burtgel.png' %}" alt="Icon Image">
+                      </div>
+                  <h4 class="feature__title">Улсын бүртгэл</h4>
+                </div><!-- /.feature__content -->
+                <a href="{% url 'uilchilgee1'%}" class="btn__link">
+                  <i class="icon-arrow-right icon-outlined"></i>
+                </a>
+              </div><!-- /.feature-item -->
+            </div><!-- /.col-lg-3 -->
+            <!-- Feature item #2 -->
+            <div class="col-sm-6 col-md-6 col-lg-3">
+              <div class="feature-item">
+                <div class="feature__content">
+                  <div class="feature__icon">
+                    <div class="single-list-topics-icon">
+                        <img src="{% static 'assets/images/ZRG/negdel.png' %}" alt="Icon Image">
+                      </div>
+                  </div>
+                  <h4 class="feature__title">Эрүүл мэндийн нэгдэл </h4>
+                </div><!-- /.feature__content -->
+                <a href="#" class="btn__link">
+                  <i class="icon-arrow-right icon-outlined"></i>
+                </a>
+              </div><!-- /.feature-item -->
+            </div><!-- /.col-lg-3 -->
+            <!-- Feature item #3 -->
+            <div class="col-sm-6 col-md-6 col-lg-3">
+              <div class="feature-item">
+                <div class="feature__content">
+                  <div class="feature__icon">
+                    <div class="single-list-topics-icon">
+                        <img src="{% static 'assets/images/ZRG/eruul mend niigmiiin daatgal.png' %}" alt="Icon Image">
+                      </div>
+                  </div>
+                  <h4 class="feature__title">Эрүүл мэнд нийгэмийн даатгал хэлтэс</h4>
+                </div><!-- /.feature__content -->
+                <a href="#" class="btn__link">
+                  <i class="icon-arrow-right icon-outlined"></i>
+                </a>
+              </div><!-- /.feature-item -->
+            </div><!-- /.col-lg-3 -->
+            <!-- Feature item #4 -->
+            <div class="col-sm-6 col-md-6 col-lg-3">
+              <div class="feature-item">
+                <div class="feature__content">
+                  <div class="feature__icon">
+                    <div class="single-list-topics-icon">
+                        <img src="{% static 'assets/images/ZRG/bolovsrol heltes.jpg' %}" alt="Icon Image">
+                      </div>
+                  </div>
+                  <h4 class="feature__title">Боловсролын хэлтэс</h4>
+                </div><!-- /.feature__content -->
+                <a href="#" class="btn__link">
+                  <i class="icon-arrow-right icon-outlined"></i>
+                </a>
+              </div><!-- /.feature-item -->
+            </div><!-- /.col-lg-3 -->
+            <!-- Feature item #5 -->
+            <div class="col-sm-6 col-md-6 col-lg-3">
+              <div class="feature-item">
+                <div class="feature__content">
+                  <div class="feature__icon">
+                    <div class="single-list-topics-icon">
+                        <img src="{% static 'assets/images/ZRG/gazriin-alba.png' %}" alt="Icon Image">
+                      </div>
+                  </div>
+                  <h4 class="feature__title">Газрын алба</h4>
+                </div><!-- /.feature__content -->
+                <a href="#" class="btn__link">
+                  <i class="icon-arrow-right icon-outlined"></i>
+                </a>
+              </div><!-- /.feature-item -->
+            </div><!-- /.col-lg-3 -->
+            <!-- Feature item #6 -->
+            <div class="col-sm-6 col-md-6 col-lg-3">
+              <div class="feature-item">
+                <div class="feature__content">
+                  <div class="feature__icon">
+                    <div class="single-list-topics-icon">
+                        <img src="{% static 'assets/images/ZRG/hudulmur halamj.png' %}" alt="Icon Image">
+                      </div>
+                  </div>
+                  <h4 class="feature__title">Хөдөлмөр халамж үйлчилгээний хэлтэс</h4>
+                </div><!-- /.feature__content -->
+                <a href="#" class="btn__link">
+                  <i class="icon-arrow-right icon-outlined"></i>
+                </a>
+              </div><!-- /.feature-item -->
+            </div><!-- /.col-lg-3 -->
+            <!-- Feature item #7 -->
+            <div class="col-sm-6 col-md-6 col-lg-3">
+              <div class="feature-item">
+                <div class="feature__content">
+                  <div class="feature__icon">
+                    <div class="single-list-topics-icon">
+                        <img src="{% static 'assets/images/ZRG/jijig dund uildver.png' %}" alt="Icon Image">
+                      </div>
+                  </div>
+                  <h4 class="feature__title">Жижиг дунд үйлдвэрлэлийг дэмжих төв</h4>
+                </div><!-- /.feature__content -->
+                <a href="#" class="btn__link">
+                  <i class="icon-arrow-right icon-outlined"></i>
+                </a>
+              </div><!-- /.feature-item -->
+            </div><!-- /.col-lg-3 -->
+            <!-- Feature item #8 -->
+            <div class="col-sm-6 col-md-6 col-lg-3">
+              <div class="feature-item">
+                <div class="feature__content">
+                  <div class="feature__icon">
+                    <div class="single-list-topics-icon">
+                        <img src="{% static 'assets/images/ZRG/tatvar.png' %}" alt="Icon Image">
+                      </div>
+                  </div>
+                  <h4 class="feature__title">Татварын хэлтэс
+
+                  </h4>
+                </div><!-- /.feature__content -->
+                <a href="#" class="btn__link">
+                  <i class="icon-arrow-right icon-outlined"></i>
+                </a>
+              </div><!-- /.feature-item -->
+            </div><!-- /.col-lg-3 -->
+          </div><!-- /.carousel-container -->
+      </section>
+
+    <!-- ========================
+      Footer
+    ========================== -->
+    <footer class="footer">
+      <div class="footer-primary">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-3">
+              <div class="footer-widget-about">
+                <img src="assets/images/logo/logo-light.png" alt="logo" class="mb-30">
+                <p class="color-gray">Сүхбаатар дүүргийн Засаг даргын Тамгын газар Монгол Улс, Улаанбаатар хот-14192, Сүхбаатар дүүргийн 7-р хороо Денверийн гудамж, Иргэдэд үйлчлэх төв байр
+                </p>
+                <a href="appointment.html" class="btn btn__primary btn__primary-style2 btn__link">
+                  <span>Сайтаар харах</span> <i class="icon-arrow-right"></i>
+                </a>
+              </div><!-- /.footer-widget__content -->
+            </div><!-- /.col-xl-2 -->
+            <div class="col-sm-6 col-md-6 col-lg-2 offset-lg-1">
+              <div class="footer-widget-nav">
+                <h6 class="footer-widget__title">дүүргийн хороод</h6>
+                <nav>
+                  <ul class="list-unstyled">
+                    <li><a href="#">Neurology Clinic</a></li>
+                    <li><a href="#">Cardiology Clinic</a></li>
+                    <li><a href="#">Pathology Clinic</a></li>
+                    <li><a href="#">Laboratory Analysis</a></li>
+                    <li><a href="#">Pediatric Clinic</a></li>
+                    <li><a href="#">Cardiac Clinic</a></li>
+                  </ul>
+                </nav>
+              </div><!-- /.footer-widget__content -->
+            </div><!-- /.col-lg-2 -->
+            <div class="col-sm-6 col-md-6 col-lg-2">
+              <div class="footer-widget-nav">
+                <h6 class="footer-widget__title">Links</h6>
+                <nav>
+                  <ul class="list-unstyled">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Our CLinic</a></li>
+                    <li><a href="#">Our Doctors</a></li>
+                    <li><a href="#">News & Media</a></li>
+                    <li><a href="#">Appointments</a></li>
+                  </ul>
+                </nav>
+              </div><!-- /.footer-widget__content -->
+            </div><!-- /.col-lg-2 -->
+            <div class="col-sm-12 col-md-6 col-lg-4">
+              <div class="footer-widget-contact">
+                <h6 class="footer-widget__title color-heading">ХОЛБОО БАРИХ</h6>
+                <ul class="contact-list list-unstyled">
+                  <li>If you have any questions or need help, feel free to contact with our team.</li>
+                  <li>
+                    <a href="Утас:70070109" class="phone__number">
+                      <i class="icon-phone"></i> <span>Утас:70070109</span>
+                    </a>
+                    <a href="Факс:976-70070113" class="phone__number">
+                      <i class="icon-phone"></i> <span>Факс:976-70070113</span>
+                    </a>
+                  </li>
+                  <a href="И-Мэйл:info@sbd.gov.mn
+                  " class="phone__number">
+                    <i class="icon-email"></i> <span>ИМэйл:info@sbd.gov.mn
+                    </span>
+                  </a>
+                </ul>
+                <div class="d-flex align-items-center">
+                  <a href="contact-us.html" class="btn btn__primary btn__link mr-30">
+                    <i class="icon-arrow-right"></i> <span>Get Directions</span>
+                  </a>
+                  <ul class="social-icons list-unstyled mb-0">
+                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                  </ul><!-- /.social-icons -->
+                </div>
+              </div><!-- /.footer-widget__content -->
+            </div><!-- /.col-lg-2 -->
+          </div><!-- /.row -->
+        </div><!-- /.container -->
+      </div><!-- /.footer-primary -->
+      <div class="footer-secondary">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-sm-12 col-md-6 col-lg-6">
+              <span class="fz-14">&copy; 2020 DataSoft, All Rights Reserved. With Love by</span>
+              <a class="fz-14 color-primary" href="http://themeforest.net/user/7oroof">7oroof.com</a>
+            </div><!-- /.col-lg-6 -->
+            <div class="col-sm-12 col-md-6 col-lg-6">
+              <nav>
+                <ul class="list-unstyled footer__copyright-links d-flex flex-wrap justify-content-end mb-0">
+                  <li><a href="#">Terms & Conditions</a></li>
+                  <li><a href="#">Privacy Policy</a></li>
+                  <li><a href="#">Cookies</a></li>
+                </ul>
+              </nav>
+            </div><!-- /.col-lg-6 -->
+          </div><!-- /.row -->
+        </div><!-- /.container -->
+      </div><!-- /.footer-secondary -->
+    </footer><!-- /.Footer -->
+    <button id="scrollTopBtn"><i class="fas fa-long-arrow-alt-up"></i></button>
+  </div><!-- /.wrapper -->
+
+  <script src="{% static 'assets/js/jquery-3.5.1.min.js' %}"></script>
+  <script src="{% static 'assets/js/plugins.js' %}"></script>
+  <script src="{% static 'assets/js/main.js' %}"></script>
+</body>
+
+</html>

@@ -36,3 +36,7 @@ def zahialagch(request):
     return render(request, 'uilajillagaa/zahialagch.html')
 def huduu(request):
     return render(request, 'hayg/huduu.html')
+def bayangol(request):
+    return render(request, 'duureg/bayangol.html')
+def uilchilgee1(request):
+    return render(request, 'turiin/uilchilgee1.html')
