@@ -16,9 +16,12 @@
   <link rel="stylesheet" href="{% static 'assets/css/libraries.css' %}">
   <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
   <link rel="stylesheet" href="{% static 'assets/css/cate.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/css/custom.css' %}">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
 </head>
 
-<body>s
+<body>
   <div class="wrapper">
     <div class="preloader">
       <div class="loading"><span></span><span></span><span></span><span></span></div>
@@ -79,8 +82,7 @@
       <nav class="navbar navbar-expand-lg sticky-navbar">
         <div class="container-fluid">
           <a class="navbar-brand" href="index.html">
-            <img src="assets/images/logo/logo-light.png" class="logo-light" alt="logo">
-            <img src="assets/images/logo/logo-dark.png" class="logo-dark" alt="logo">
+           
           </a>
           <button class="navbar-toggler" type="button">
             <span class="menu-lines"><span></span></span>
@@ -150,6 +152,71 @@
       </nav><!-- /.navabr -->
     </header>
     
+    
+    <div class="ant-tabs ant-tabs-left uppercase">
+      <div role="tablist" class="ant-tabs-nav">
+        <div class="ant-tabs-nav-wrap">
+          <div class="ant-tabs-nav-list">
+            <div class="ant-tabs-tab">
+              <div role="tab" aria-selected="false" class="ant-tabs-tab-btn" tabindex="0" id="rc-tabs-3-tab-item-1" aria-controls="rc-tabs-3-panel-item-1">Танилцуулга</div>
+            </div>
+            <div class="ant-tabs-tab ant-tabs-tab-active">
+              <div role="tab" aria-selected="true" class="ant-tabs-tab-btn" tabindex="0" id="rc-tabs-3-tab-item-2" aria-controls="rc-tabs-3-panel-item-2">Үйлчилгээ</div>
+            </div>
+            <div class="ant-tabs-tab">
+              <div role="tab" aria-selected="false" class="ant-tabs-tab-btn" tabindex="0" id="rc-tabs-3-tab-item-3" aria-controls="rc-tabs-3-panel-item-3">Холбоо барих</div>
+            </div>
+            <div class="ant-tabs-ink-bar ant-tabs-ink-bar-animated" style="top: 38px; height: 38px;"></div>
+          </div>
+        </div>
+        <div class="ant-tabs-nav-operations ant-tabs-nav-operations-hidden">
+          <button type="button" class="ant-tabs-nav-more" tabindex="-1" aria-hidden="true" aria-haspopup="listbox" aria-controls="rc-tabs-3-more-popup" id="rc-tabs-3-more" aria-expanded="false" style="visibility: hidden; order: 1;">
+            <span role="img" aria-label="ellipsis" class="anticon anticon-ellipsis">
+              <svg viewBox="64 64 896 896" focusable="false" data-icon="ellipsis" width="1em" height="1em" fill="currentColor" aria-hidden="true">
+                <path d="M176 511a56 56 0 10112 0 56 56 0 10-112 0zm280 0a56 56 0 10112 0 56 56 0 10-112 0zm280 0a56 56 0 10112 0 56 56 0 10-112 0z"></path>
+              </svg>
+            </span>
+          </button>
+        </div>
+      </div>
+      <div class="ant-tabs-content-holder">
+        <div class="ant-tabs-content ant-tabs-content-left">
+          <div role="tabpanel" tabindex="-1" aria-hidden="true" class="ant-tabs-tabpane ant-tabs-tabpane-hidden" id="rc-tabs-3-panel-item-1" aria-labelledby="rc-tabs-3-tab-item-1">
+            <img src="http://admin.bgd.mn/couch/uploads/image/gallery/2022/01-sar/309060789_478462394328176_7579050429055911187_n.jpg" alt="logo" loading="lazy"><br>
+            <p style="text-align: justify;">
+              <strong>Баянгол дүүргийн улсын бүртгэлийн хэлтэс</strong>
+            </p>
+            <!-- Other content for the introduction tab -->
+          </div>
+          <div class="ant-tabs-tabpane ant-tabs-tabpane-hidden" id="rc-tabs-3-panel-item-2" aria-labelledby="rc-tabs-3-tab-item-2">
+            <!-- Content for the services tab -->
+          </div>
+          <div class="ant-tabs-tabpane ant-tabs-tabpane-hidden" id="rc-tabs-3-panel-item-3" aria-labelledby="rc-tabs-3-tab-item-3">
+            <!-- Content for the contact tab -->
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    <script>
+    function openCity(evt, cityName) {
+      var i, x, tablinks;
+      x = document.getElementsByClassName("city");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablink");
+      for (i = 0; i < x.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" w3-red", ""); 
+      }
+      document.getElementById(cityName).style.display = "block";
+      evt.currentTarget.className += " w3-red";
+    }
+    </script>
+    
+    </body>
+    </html>
     <footer class="footer">
         <div class="footer-primary">
           <div class="container">
