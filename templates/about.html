@@ -8,7 +8,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <meta name="description" content="Medcity - Medical Healthcare HTML5 Template">
   <link href="assets/images/favicon/favicon.png" rel="icon">
-  <title>Монгол хаяг үйл ажиллагаа</title>
+  <title>Medcity - Medical Healthcare HTML5 Template</title>
 
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Roboto:wght@400;700&display=swap">
@@ -69,9 +69,42 @@
               <div class="d-flex align-items-center justify-content-between">
                 <ul class="contact__list d-flex flex-wrap align-items-center list-unstyled mb-0">
                   <li>
-                   
+                    <button class="miniPopup-emergency-trigger" type="button">24/7 Emergency</button>
+                    <div id="miniPopup-emergency" class="miniPopup miniPopup-emergency text-center">
+                      <div class="emergency__icon">
+                        <i class="icon-call3"></i>
+                      </div>
+                      <a href="tel:+201061245741" class="phone__number">
+                        <i class="icon-phone"></i> <span>+2 01061245741</span>
+                      </a>
+                      <p>Please feel free to contact our friendly reception staff with any general or medical enquiry.
+                      </p>
+                      <a href="appointment.html" class="btn btn__secondary btn__link btn__block">
+                        <span>Make Appointment</span> <i class="icon-arrow-right"></i>
+                      </a>
+                    </div><!-- /.miniPopup-emergency -->
+                  </li>
+                  <li>
+                    <i class="icon-phone"></i><a href="tel:+5565454117">Emergency Line: (002) 01061245741</a>
+                  </li>
+                  <li>
+                    <i class="icon-location"></i><a href="#">Location: Brooklyn, New York</a>
+                  </li>
+                  <li>
+                    <i class="icon-clock"></i><a href="contact-us.html">Mon - Fri: 8:00 am - 7:00 pm</a>
+                  </li>
                 </ul><!-- /.contact__list -->
-                
+                <div class="d-flex">
+                  <ul class="social-icons list-unstyled mb-0 mr-30">
+                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                  </ul><!-- /.social-icons -->
+                  <form class="header-topbar__search">
+                    <input type="text" class="form-control" placeholder="Search...">
+                    <button class="header-topbar__search-btn"><i class="fa fa-search"></i></button>
+                  </form>
+                </div>
               </div>
             </div><!-- /.col-12 -->
           </div><!-- /.row -->
@@ -79,7 +112,10 @@
       </div><!-- /.header-top -->
       <nav class="navbar navbar-expand-lg sticky-navbar">
         <div class="container-fluid">
-         
+          <a class="navbar-brand" href="index.html">
+            <img src="{% static 'assets/images/logo/logo-light.png' %}" class="logo-light" alt="logo">
+            <img src="{% static 'assets/images/logo/logo-dark.png' %}" class="logo-dark" alt="logo">
+          </a>
           <button class="navbar-toggler" type="button">
             <span class="menu-lines"><span></span></span>
           </button>
@@ -211,8 +247,8 @@
               </li><!-- /.nav-item -->
             </ul> <!-- /.miniPopup-departments -->
             <a href="appointment.html" class="btn btn__primary btn__rounded ml-30">
-              <i class="icon-location"></i>
-              <span>Бүртэгүүлэх</span>
+              <i class="icon-calendar"></i>
+              <span>Appointment</span>
             </a>
           </div>
         </div><!-- /.container -->
@@ -221,7 +257,7 @@
 	<section id="explore" class="explore">
         <div class="container">
             <div class="section-header">
-                <h2>Соёл урлаг</h2>
+                <h2>explore</h2>
                 <p>Explore New place, food, culture around the world and many more</p>
             </div><!--/.section-header-->
             <div class="explore-content">
