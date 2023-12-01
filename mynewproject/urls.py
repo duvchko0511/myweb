@@ -14,12 +14,13 @@ urlpatterns = [
     path('blog/', views.blog, name='blog'),
     path('shop', views.shop, name='shop'),
     path('login/', views.login, name='login'),
-    path('signup/', views.signup, name='signup'),
+    path('forgetpass/', views.forgetpass, name='forgetpass'),
     path('horoo/', views.horoo, name='horoo'),
     path('zahialagch/', views.zahialagch, name='zahialagch'),
     path('huduu/', views.huduu, name='huduu'),
     path('bayangol/', views.bayangol, name='bayangol'),
-    path('uilchilgee1/', views.uilchilgee1, name='uilchilgee1')
+    path('uilchilgee1/', views.uilchilgee1, name='uilchilgee1'),
+    path('register1/', views.register1, name='register1')
     
  
     # Other URL patterns

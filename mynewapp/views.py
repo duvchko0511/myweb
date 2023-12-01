@@ -40,3 +40,7 @@ def bayangol(request):
     return render(request, 'duureg/bayangol.html')
 def uilchilgee1(request):
     return render(request, 'turiin/uilchilgee1.html')
+def register1(request):
+    return render(request, 'account/register1.html')
+def forgetpass(request):
+    return render(request, 'account/forgetpass.html')
