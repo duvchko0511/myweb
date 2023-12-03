@@ -32,7 +32,13 @@
 
  {% endblock stylecss %}
 </head>
-
+<style>
+  #map {
+    margin: auto;
+    display: block;
+    border: none;
+  }
+</style>
 <body>
   <div class="wrapper">
    <!-- /.preloader -->
@@ -42,6 +48,47 @@
         Header
     =========================== -->
     <header class="header header-layout1">
+      <div class="header-topbar">
+        <div class="container-fluid">
+          <div class="row align-items-center">
+            <div class="col-12">
+              <div class="d-flex align-items-center justify-content-between">
+                <ul class="contact__list d-flex flex-wrap align-items-center list-unstyled mb-0">
+                  <li>
+                    <button class="miniPopup-emergency-trigger" type="button">Цахим сан</button>
+                    <div id="miniPopup-emergency" class="miniPopup miniPopup-emergency text-center">
+                      <div class="emergency__icon">
+                        <i class="icon-call3"></i>
+                      </div>
+                    
+                    </div><!-- /.miniPopup-emergency -->
+                  </li>
+                  <li>
+                    <i class="icon-phone"></i><a href="tel:+5565454117">Холбоо барих: (002) 01061245741</a>
+                  </li>
+                  <li>
+                    <i class="icon-location"></i><a href="#">Location: Ulaanbaatar(Mongolia)</a>
+                  </li>
+                  <li>
+                    <i class="icon-clock"></i><a href="contact-us.html"></a>
+                  </li>
+                </ul><!-- /.contact__list -->
+                <div class="d-flex">
+                  <ul class="social-icons list-unstyled mb-0 mr-30">
+                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                  </ul><!-- /.social-icons -->
+                  <form class="header-topbar__search">
+                    <input type="text" class="form-control" placeholder="Search...">
+                    <button class="header-topbar__search-btn"><i class="fa fa-search"></i></button>
+                  </form>
+                </div>
+              </div>
+            </div><!-- /.col-12 -->
+          </div><!-- /.row -->
+        </div><!-- /.container -->
+      </div>
      <!-- /.header-top -->
       <nav class="navbar navbar-expand-lg sticky-navbar">
         <div class="container-fluid">
@@ -204,19 +251,21 @@
         margin: 0;
         padding: 0;
       }
-  
+    
       /* Style the tabcontent */
       .tabcontent {
-        background-color: #fff; /* Set your desired background color */
-        padding: 20px; /* Adjust as needed */
+        background-color: #213360; /* Set your desired background color */
+        padding: 100px; /* Adjust as needed */
       }
-  
+    
       /* Style the map container */
       #map {
         width: 100%; /* Make the map container full-width */
         height: 300px; /* Set your desired height */
-        border: 1px solid #ddd; /* Add a border for clarity */
+        margin: auto; /* Center the map horizontally */
+        border: none; /* Remove the border */
       }
+    
   
       /* Add additional styles based on your preferences */
     </style>
@@ -224,47 +273,154 @@
   </head>
   <body>
   
-  <div id="Paris" class="tabcontent">
-    <h5>Аймагууд</h5>
-    <div class="tab">
+
+  
       <!-- Map container -->
       <div id="map"></div>
-    </div>
-  </div>
+
   
   <script>
-    var simplemaps_countrymap_mapdata = {
+    var simplemaps_countrymap_mapdata={
       main_settings: {
-        // General settings
-        width: "300", //'700' or 'responsive'
-        background_color: "#260e0e",
+       //General settings
+        width: "700", //'700' or 'responsive'
+        background_color: "#ea4335",
         background_transparent: "yes",
-        border_color: "#ffffff",
-        // ... (other settings)
+        border_color: "#dee3f1",
+        
+        //State defaults
+        state_description: "Navigate to state",
+        state_color: "#082360",
+        state_hover_color: "#093457",
+        state_url: "{% url 'aimag' %}",
+        border_size: 1.5,
+        all_states_inactive: ".",
+        all_states_zoomable: "yes",
+        
+        //Location defaults
+        location_description: "Location description",
+        location_url: "",
+        location_color: "#FF0067",
+        location_opacity: 0.8,
+        location_hover_opacity: 1,
+        location_size: 25,
+        location_type: "square",
+        location_image_source: "frog.png",
+        location_border_color: "#FFFFFF",
+        location_border: 2,
+        location_hover_border: 2.5,
+        all_locations_inactive: "no",
+        all_locations_hidden: "no",
+        
+        //Label defaults
+        label_color: "#d5ddec",
+        label_hover_color: "#d5ddec",
+        label_size: 22,
+        label_font: "Arial",
+        hide_labels: "no",
+        hide_eastern_labels: "no",
+       
+        //Zoom settings
+        zoom: "yes",
+        manual_zoom: "yes",
+        back_image: "no",
+        initial_back: "no",
+        initial_zoom: "-1",
+        initial_zoom_solo: "no",
+        region_opacity: 1,
+        region_hover_opacity: 0.6,
+        zoom_out_incrementally: "yes",
+        zoom_percentage: 0.99,
+        zoom_time: 0.5,
+        
+        //Popup settings
+        popup_color: "white",
+        popup_opacity: 0.9,
+        popup_shadow: 1,
+        popup_corners: 5,
+        popup_font: "12px/1.5 Verdana, Arial, Helvetica, sans-serif",
+        popup_nocss: "no",
+        
+        //Advanced settings
+        div: "map",
+        auto_load: "yes",
+        url_new_tab: "no",
+        images_directory: "default",
+        fade_time: 0.1,
+        link_text: "View Website",
+        popups: "detect",
+        state_image_url: "",
+        state_image_position: "",
+        location_image_url: "",
+        border_hover_color: "#002182"
       },
       state_specific: {
-        MNG3208: { name: "Bayan-Ölgiy" },
-        MNG3297: { name: "Dornogovi" },
-        MNG3298: { name: "Ömnögovi" },
-        MNG3315: { name: "Hentiy" },
-        MNG3316: { name: "Arhangay" },
-        MNG3317: { name: "Bayanhongor" },
-        MNG3318: { name: "Dzavhan" },
-        MNG3319: { name: "Govi-Altay" },
-        MNG3320: { name: "Hovd" },
-        MNG3321: { name: "Hövsgöl" },
-        MNG3322: { name: "Uvs" },
-        MNG3323: { name: "Bulgan" },
-        MNG3324: { name: "Orhon" },
-        MNG3325: { name: "Dundgovi" },
-        MNG3326: { name: "Selenge" },
-        MNG3327: { name: "Övörhangay" },
-        MNG3328: { name: "Darhan-Uul" },
-        MNG3329: { name: "Töv" },
-        MNG3330: { name: "Govĭ-Sümber" },
-        MNG3331: { name: "Ulaanbaatar" },
-        MNG3332: { name: "Dornod" },
-        MNG3333: { name: "Sühbaatar" }
+        MNG3208: {
+          name: "Баян-Өлгий"
+        },
+        MNG3297: {
+          name: "Дорноговь"
+        },
+        MNG3298: {
+          name: "Өмнөговь"
+        },
+        MNG3315: {
+          name: "Хэнтий"
+        },
+        MNG3316: {
+          name: "Архангай"
+        },
+        MNG3317: {
+          name: "Баянхонгор"
+        },
+        MNG3318: {
+          name: "Завхан"
+        },
+        MNG3319: {
+          name: "Говь-Алтай"
+        },
+        MNG3320: {
+          name: "Ховд"
+        },
+        MNG3321: {
+          name: "Хөвсгөл"
+        },
+        MNG3322: {
+          name: "Увс"
+        },
+        MNG3323: {
+          name: "Булган"
+        },
+        MNG3324: {
+          name: "Орхон"
+        },
+        MNG3325: {
+          name: "Дундговь"
+        },
+        MNG3326: {
+          name: "Сэлэнгэ"
+        },
+        MNG3327: {
+          name: "Өвөрхангай"
+        },
+        MNG3328: {
+          name: "Дархан-Уул"
+        },
+        MNG3329: {
+          name: "Төв"
+        },
+        MNG3330: {
+          name: "Говьсүмбэр"
+        },
+        MNG3331: {
+          name: "Улаанбаатар"
+        },
+        MNG3332: {
+          name: "Дорнод"
+        },
+        MNG3333: {
+          name: "Сүхбаатар"
+        }
       },
       locations: {
         "0": {
@@ -277,7 +433,15 @@
       legend: {
         entries: []
       },
-      regions: {}
+      regions: {
+        "0": {
+          states: [],
+          color: "ea4335",
+          name: "Dzavkhan",
+          hover_color: "#ffffff",
+          description: "Navigate to state"
+        }
+      }
     };
   </script>
   
