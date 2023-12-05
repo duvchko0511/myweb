@@ -1,15 +1,15 @@
 .list-topics1 {
-    padding: 100px 0; /* Adjust the padding to match the first section */
-    background: #fff; /* Set the background color if necessary */
-  }
-  
+    padding: 100px 0;
+    /* Adjust the padding to match the first section */
+    background: #fff;
+    /* Set the background color if necessary */
+}
 
-  .list-topics1-content1 ul li {
+.list-topics1-content1 ul li {
     display: inline-block;
-    
-  }
-  
-  .single-list-topics1-content1 {
+}
+
+.single-list-topics1-content1 {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -22,35 +22,40 @@
     margin-bottom: 10px;
     box-shadow: 0 0px 10px rgba(71, 71, 71, 0.2);
     transition: 0.3s linear;
-  
-  }
-  
-  .single-list-topics1-content1 h2 > a {
+}
+
+.single-list-topics1-content1 h5>a {
     margin: 13px 0;
-  }
-  
-  .single-list-topics1-icon [class^="flaticon-"]:before,
-  .single-list-topics-icon [class*=" flaticon-"]:before,
-  .single-list-topics-icon [class^="flaticon-"]:after,
-  .single-list-topics-icon [class*=" flaticon-"]:after {
+    white-space: nowrap;
+    /* Prevent text from wrapping */
+    overflow: hidden;
+    /* Hide overflowing text */
+    text-overflow: ellipsis;
+    /* Add an ellipsis (...) to indicate overflow */
+}
+
+.single-list-topics-icon [class^="flaticon-"]:before,
+.single-list-topics-icon [class*=" flaticon-"]:before,
+.single-list-topics-icon [class^="flaticon-"]:after,
+.single-list-topics-icon [class*=" flaticon-"]:after {
     font-size: 45px;
     color: #f4f4f5;
-  }
-  
-  .single-list-topics1-content:hover .single-list-topics-icon [class^="flaticon-"]:before,
-  .single-list-topics1-content:hover .single-list-topics-icon [class*=" flaticon-"]:before,
-  .single-list-topics1-content:hover .single-list-topics-icon [class^="flaticon-"]:after,
-  .single-list-topics1-content:hover .single-list-topics-icon [class*=" flaticon-"]:after {
+}
+
+.single-list-topics1-content1:hover .single-list-topics-icon [class^="flaticon-"]:before,
+.single-list-topics1-content1:hover .single-list-topics-icon [class*=" flaticon-"]:before,
+.single-list-topics1-content1:hover .single-list-topics-icon [class^="flaticon-"]:after,
+.single-list-topics1-content1:hover .single-list-topics-icon [class*=" flaticon-"]:after {
     color: #fff;
-  }
-  
-  .single-list-topics1-content1:hover h2 > a,
-  .single-list-topics1-content1:hover p {
-    color: #fff!important;
-  }
-  
-  .single-list-topics1-content1:hover {
+}
+
+.single-list-topics1-content1:hover h5>a,
+.single-list-topics1-content1:hover p {
+    color: #fff !important;
+}
+
+.single-list-topics1-content1:hover {
     color: #c52c2c;
     background: #54acff;
     box-shadow: 0 5px 10px rgba(71, 71, 71, 0.4);
-  }
+}

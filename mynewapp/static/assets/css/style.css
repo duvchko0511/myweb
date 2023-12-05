@@ -4636,19 +4636,25 @@ input[type=radio] {
     color: #ea4335;
     display: block;
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 8px;
 }
 
-.slider .slide__title {
-    font-size: 65px;
-    line-height: 1;
-    margin-bottom: 15px;
-    color: rgb(247, 245, 245);
+.slide__title {
+    font-size: 50px;
+    line-height: 0, 5;
+    margin-bottom: 5px;
+    color: rgb(9, 9, 228);
+}
+
+.text-container {
+    position: relative;
+    top: -0px;
+    /* Adjust this value to move the text up or down */
 }
 
 .slider .slide__desc {
-    color: #f8f6f6;
+    color: rgb(8, 8, 226), 246, 248;
     font-size: 17px;
     line-height: 1.5;
     font-weight: 700;

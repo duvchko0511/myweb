@@ -35,6 +35,133 @@
   /* Add additional styles based on your preferences */
 </style>
 <body>
+  <header class="header header-layout1">
+    <div class="header-topbar">
+      <div class="container-fluid">
+        <div class="row align-items-center">
+          <div class="col-12">
+            <div class="d-flex align-items-center justify-content-between">
+              <ul class="contact__list d-flex flex-wrap align-items-center list-unstyled mb-0">
+                <li>
+                  <button class="miniPopup-emergency-trigger" type="button">Цахим сан</button>
+                  <div id="miniPopup-emergency" class="miniPopup miniPopup-emergency text-center">
+                    <div class="emergency__icon">
+                      <i class="icon-call3"></i>
+                    </div>
+                  
+                  </div><!-- /.miniPopup-emergency -->
+                </li>
+                <li>
+                  <i class="icon-phone"></i><a href="tel:+5565454117">Холбоо барих: 90094570</a>
+                </li>
+                <li>
+                  <i class="icon-location"></i><a href="#">Location: Ulaanbaatar(Mongolia)</a>
+                </li>
+                <li>
+                  <i class="icon-clock"></i><a href="contact-us.html"></a>
+                </li>
+              </ul><!-- /.contact__list -->
+              <div class="d-flex">
+                <ul class="social-icons list-unstyled mb-0 mr-30">
+                  <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                  <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                  <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                </ul><!-- /.social-icons -->
+                <form class="header-topbar__search">
+                  <input type="text" class="form-control" placeholder="Search...">
+                  <button class="header-topbar__search-btn"><i class="fa fa-search"></i></button>
+                </form>
+              </div>
+            </div>
+          </div><!-- /.col-12 -->
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </div>
+   <!-- /.header-top -->
+   <nav class="navbar navbar-expand-lg sticky-navbar">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img src="{% static 'assets/images/logo/111.png' %}" class="logo-dark logo" alt="logo">
+      </a>
+      <button class="navbar-toggler" type="button">
+        <span class="menu-lines"><span></span></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNavigation">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav__item has-dropdown">
+            <li class="nav__item">
+              <a href="{% url 'index' %}" class="nav__item-link">Нүүр</a>
+            </li><!-- /.dropdown-menu -->
+          </li><!-- /.nav-item -->
+          <li class="nav__item has-dropdown">
+            <a href="#" data-toggle="dropdown" class="dropdown-toggle nav__item-link active">Бидний тухай</a>
+            <ul class="dropdown-menu">
+              <li class="nav__item">
+                <a href="{% url 'about' %}" class="nav__item-link">About Us</a>
+              </li><!-- /.nav-item -->
+              <li class="nav__item">
+                <a href="services.html" class="nav__item-link">Our Services</a>
+              </li><!-- /.nav-item -->
+              <li class="nav__item">
+                <a href="services-single.html" class="nav__item-link">single Services</a>
+              </li><!-- /.nav-item -->
+              <li class="nav__item">
+                <a href="pricing.html" class="nav__item-link">Pricing & Plans</a>
+              </li><!-- /.nav-item -->
+              <li class="nav__item">
+                <a href="appointment.html" class="nav__item-link">Appointments</a>
+              </li><!-- /.nav-item -->
+              <li class="nav__item">
+                <a href="faqs.html" class="nav__item-link">Help & FAQs</a>
+              </li> <!-- /.nav-item -->
+              <li class="nav__item">
+                <a href="gallery.html" class="nav__item-link">Our Gallery</a>
+              </li><!-- /.nav-item -->
+            </ul><!-- /.dropdown-menu -->
+          </li><!-- /.nav-item -->
+        <!-- /.nav-item -->
+       <!-- /.nav-item -->
+       <!-- /.nav-item -->
+       <li class="nav__item">
+        <a href="{% url 'aimag' %}" class="nav__item-link">Зөвлөмж</a>
+      </li><!-- /.nav-item -->
+        </ul><!-- /.navbar-nav -->
+        <button class="close-mobile-menu d-block d-lg-none"><i class="fas fa-times"></i></button>
+      </div><!-- /.navbar-collapse -->
+      <div class="d-none d-xl-flex align-items-center position-relative ml-30">
+        <div class="miniPopup-departments-trigger">
+          <span class="menu-lines" id="miniPopup-departments-trigger-icon"><span></span></span>
+          <a href="departments.html">Их дэлгүүрүүд</a>
+        </div>
+        <ul id="miniPopup-departments" class="miniPopup miniPopup-departments dropdown-menu">
+          <li class="nav__item">
+            <a href="department-single.html" class="nav__item-link">Neurology Clinic</a>
+          </li><!-- /.nav-item -->
+          <li class="nav__item">
+            <a href="department-single.html" class="nav__item-link">Cardiology Clinic</a>
+          </li><!-- /.nav-item -->
+          <li class="nav__item">
+            <a href="department-single.html" class="nav__item-link">Pathology Clinic</a>
+          </li><!-- /.nav-item -->
+          <li class="nav__item">
+            <a href="department-single.html" class="nav__item-link">Laboratory Clinic</a>
+          </li><!-- /.nav-item -->
+          <li class="nav__item">
+            <a href="department-single.html" class="nav__item-link">Pediatric Clinic</a>
+          </li><!-- /.nav-item -->
+          <li class="nav__item">
+            <a href="department-single.html" class="nav__item-link">Cardiac Clinic</a>
+          </li><!-- /.nav-item -->
+        </ul> <!-- /.miniPopup-departments -->
+        <a href="appointment.html" class="btn btn__primary btn__rounded ml-30">
+          <i class="icon-calendar"></i>
+          <span>Нэвтрэх</span>
+        </a>
+      </div>
+    </div><!-- /.container -->
+  </nav>
+    <!-- /.navabr -->
+  </header>
   <div class="wrapper">
     <div class="preloader">
       <div class="loading"><span></span><span></span><span></span><span></span></div>
@@ -43,99 +170,8 @@
     <!-- =========================
         Header
     =========================== -->
-    <header class="header header-layout1">
-      <div class="header-topbar">
-        <div class="container">
-          <div class="row align-items-center">
-            <div class="col-12">
-              <div class="d-flex align-items-center justify-content-between">
-                <ul class="contact__list d-flex flex-wrap align-items-center list-unstyled mb-0">
-                  <li>
-                    <button class="miniPopup-emergency-trigger" type="button">Монгол хаяг</button>
-                    <div id="miniPopup-emergency" class="miniPopup miniPopup-emergency text-center">
-                      <div class="see__icon">
-                        <i class="see-icon"></i>
-                      </div>  
-                      <a href="{%url 'appointment'%}" class="btn btn__secondary btn__link btn__block">
-                        <span>Хаяг байршилийн нэгдсэн сан</span> <i class="icon-arrow-right"></i>
-                      </a>
-                    </div><!-- /.miniPopup-emergency -->
-                  </li>
-                  
-                </ul><!-- /.contact__list -->
-                <div class="d-flex">
-                  <ul class="social-icons list-unstyled mb-0 mr-30">
-                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                  </ul><!-- /.social-icons -->
-
-                </div>
-              </div>
-            </div><!-- /.col-12 -->
-          </div><!-- /.row -->
-        </div><!-- /.container -->
-      </div><!-- /.header-top -->
-      <nav class="navbar navbar-expand-lg sticky-navbar">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="index">
-            <img src="{% static 'assets/images/logo/odo.png' %}" class="logo-dark logo" alt="logo">
-           </a>
-          <button class="navbar-toggler" type="button">
-            <span class="menu-lines"><span></span></span>
-          </button>
-          <div class="collapse navbar-collapse" id="mainNavigation">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav__item">
-                <a href="{% url 'index' %}" class="nav__item-link">Home</a>
-              </li>
-              <li class="nav__item has-dropdown">
-                <a href="#" data-toggle="dropdown" class="dropdown-toggle nav__item-link">Бидний тухай</a>
-                <ul class="dropdown-menu">
-                  <li class="nav__item">
-                    <a href="{% url 'about' %}" class="nav__item-link">Манай тухай юу хха</a>
-                  </li>
-                  <li class="nav__item">
-                    <a href="services.html" class="nav__item-link"> болндоо болно</a>
-                  </li>
-                  <!--
-                   <li class="nav__item">
-                    <a href="services-single.html" class="nav__item-link">single Services</a>
-                  </li> 
-                   <li class="nav__item">
-                    <a href="pricing.html" class="nav__item-link">Pricing & Plans</a>
-                  </li>
-                  <li class="nav__item">
-                    <a href="{% url 'appointment' %}" class="nav__item-link">Appointments</a>
-                  </li>
-                  <li class="nav__item">
-                    <a href="faqs.html" class="nav__item-link">Help & FAQs</a>
-                  </li> 
-                  <li class="nav__item">
-                    <a href="gallery.html" class="nav__item-link">Our Gallery</a>
-                  </li> -->
-                </ul>
-              </li>
-              
-              <li class="nav__item">
-                <a href="{% url 'aimag' %}" class="nav__item-link">Зөвлөмж</a>
-              </li>
-          
-              <!-- /.nav-item -->
-            </ul><!-- /.navbar-nav -->
-            <button class="close-mobile-menu d-block d-lg-none"><i class="fas fa-times"></i></button>
-            <a href="{% url 'login' %}" class="btn btn__primary btn__rounded mr-30">             
-              <span>Бүртэгүүлэх</span>
-            </a>
-          </div>
-        <!-- /.navbar-collapse -->
-             <!-- /.miniPopup-departments -->
-             
-          </d>
-        </div><!-- /.container -->
-      </nav>
-      <!-- /.navabr -->
-    </header><!-- /.Header -->
+    {% block header%}
+    {% endblock header%}<!-- /.Header -->
 
     <!-- ========================
        page title 
@@ -160,7 +196,7 @@
                   <div class="row">
                     <div class="col-sm-12 col-md-8 col-lg-9">
                       <div class="sorting-options d-flex flex-wrap justify-content-between align-items-center mb-30">
-                        <span>Нийтэдээ 9 дүүрэг</span>
+                        <span>Нийтдээ 9 дүүрэг</span>
                         <select>
                           <option selected="" value="0">дүүрэг</option>
                           <option value="1">Сүхбаатар</option>
@@ -368,7 +404,7 @@
                             <!-- product item #2 -->
                             <div class="widget-product-item d-flex align-items-center">
                               <div class="widget-product__img">
-                                <a href="#"><img src="{% static 'aassets/images/products/nomin.jpg' %}" alt="Product" loading="lazy"></a>
+                                <a href="#"><img src="{% static 'assets/images/products/nomin.jpg' %}" alt="Product" loading="lazy"></a>
                               </div><!-- /.product-product-img -->
                               <div class="widget-product__content">
                                 <h5 class="widget-product__title"><a href="#">Nomin</a></h5>
@@ -378,29 +414,29 @@
                             <!-- product item #3 -->
                             <div class="widget-product-item d-flex align-items-center">
                               <div class="widget-product__img">
-                                <a href="#"><img src="{% static 'assets/images/products/APUT-night.jpg' %}" alt="Product" loading="lazy"></a>
+                                <a href="#"><img src="{% static 'assets/images/products/dargon.jpg' %}" alt="Product" loading="lazy"></a>
                               </div><!-- /.product-product-img -->
                               <div class="widget-product__content">
-                                <h5 class="widget-product__title"><a href="#">Apu</a></h5>
-                                <span class="widget-product__price">trade</span>
+                                <h5 class="widget-product__title"><a href="#">Dragon</a></h5>
+                                <span class="widget-product__price">auto vocsal</span>
                               </div><!-- /.widget-product-content -->
                             </div><!-- /.widget-product-item -->
                             <div class="widget-product-item d-flex align-items-center">
                               <div class="widget-product__img">
-                                <a href="#"><img src="assets/images/products/12.jpg" alt="Product" loading="lazy"></a>
+                                <a href="#"><img src="{% static 'assets/images/products/hunnu mall.jpg' %}" alt="Product" loading="lazy"></a>
                               </div><!-- /.product-product-img -->
                               <div class="widget-product__content">
-                                <h5 class="widget-product__title"><a href="#">Apu</a></h5>
-                                <span class="widget-product__price">trade</span>
+                                <h5 class="widget-product__title"><a href="#">Hunnu Mall</a></h5>
+                                <span class="widget-product__price">mall</span>
                               </div><!-- /.widget-product-content -->
                             </div><!-- /.widget-product-item -->
                             <div class="widget-product-item d-flex align-items-center">
                               <div class="widget-product__img">
-                                <a href="#"><img src="assets/images/products/12.jpg" alt="Product" loading="lazy"></a>
+                                <a href="#"><img src="{% static 'assets/images/products/orgil.jpg' %}" alt="Product" loading="lazy"></a>
                               </div><!-- /.product-product-img -->
                               <div class="widget-product__content">
-                                <h5 class="widget-product__title"><a href="#">Apu</a></h5>
-                                <span class="widget-product__price">trade</span>
+                                <h5 class="widget-product__title"><a href="#">Orgil</a></h5>
+                                <span class="widget-product__price"></span>
                               </div><!-- /.widget-product-content -->
                             </div><!-- /.widget-product-item -->
                             <div class="widget-product-item d-flex align-items-center">
@@ -414,18 +450,7 @@
                             </div><!-- /.widget-product-item -->
                           </div><!-- /.widget-content -->
                         </div><!-- /.widget-poducts -->
-                        <div class="widget widget-categories">
-                          <h5 class="widget__title"></h5>
-                          <div class="widget-content">
-                            <ul class="list-unstyled mb-0">
-                              <li><a href="#"><span class="cat-count">1-р</span><span>хороо</span></a></li>
-                              <li><a href="#"><span class="cat-count">2-р</span><span>хороо</span></a></li>
-                              <li><a href="#"><span class="cat-count">3-р</span><span>хороо</span></a></li>
-                              <li><a href="#"><span class="cat-count">4-р</span><span>хороо</span></a></li>
-                              <li><a href="#"><span class="cat-count">5-р</span><span>хороо</span></a></li>
-                              <li><a href="#"><span class="cat-count">6-р</span><span>хороо</span></a></li>
-                            </ul>
-                          </div><!-- /.widget-content -->
+                       <!-- /.widget-content -->
                         </div><!-- /.widget-categories -->
                        <div class="widget widget-filter">
                          <!----> 
