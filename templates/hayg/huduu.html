@@ -181,16 +181,16 @@
       <div class="container">
         <div class="row">
           <div class="col-12">
-            <h1 class="pagetitle__heading">Хаяг байршилууд</h1>
+            <h1 class="pagetitle__heading">Хаяг байршил</h1>
             <div class="tab"> 
               <button class="tablinks" onclick="openCity(event, 'London')"><h5>Улаанбаатар хот</h5></button>
-              <button class="tablinks" onclick="openCity(event, 'Paris')"><h5>Орон нутагууд</h5></button>
+              <button class="tablinks" onclick="openCity(event, 'Paris')"><h5>Аймаг, орон нутаг</h5></button>
              
             </div>
             
             <!-- Tab content -->
             <div id="London" class="tabcontent">
-              <h5>Улаанбаатар Дүүрэг</h5>
+              <h5>Дүүргүүд</h5>
              
                 <div class="container">
                   <div class="row">
@@ -211,58 +211,6 @@
                         </select>
                       </div>
                       <div class="row">
-                        <!-- Product item #1 -->
-                        <div class="col-sm-6 col-md-6 col-lg-4">
-                          <div class="product-item">
-                            <div class="product__img">
-                              <img src="{% static 'assets/images/duureg/09 Sukhbaatar.jpg' %}" alt="Product" loading="lazy">
-                              <div class="product__action">
-                                <a href="{% url 'service1'%}" class="btn btn__primary btn__rounded">
-                                  <i class="icon-arrow-right"></i> <span>Дэлгэрэнгүй</span>
-                                </a>
-                              </div><!-- /.product-action -->
-                            </div><!-- /.product-img -->
-                            <div class="product__info">
-                              <h4 class="product__title"><a href="{% url 'service1'%}">Сүхбаатар</a></h4>
-                              <span class="product__price">Дүүрэг</span>
-                            </div><!-- /.product-content -->
-                          </div><!-- /.product-item -->
-                        </div><!-- /.col-lg-4 -->
-                        <!-- Product item #2 -->
-                        <div class="col-sm-6 col-md-6 col-lg-4">
-                          <div class="product-item">
-                            <div class="product__img">
-                              <img src="{% static 'assets/images/duureg/songinihairhan.jpg' %}" alt="Product" loading="lazy">
-                              <div class="product__action">
-                                <a href="#" class="btn btn__primary btn__rounded">
-                                  <i class="icon-arrow-right"></i> <span>Дэлгэрэнгүй</span>
-                                </a>
-                              </div><!-- /.product-action -->
-                            </div><!-- /.product-img -->
-                            <div class="product__info">
-                              <h4 class="product__title"><a href="#">Сонгинохайрхан</a></h4>
-                              <span class="product__price">Дүүрэг</span>
-                            </div><!-- /.product-content -->
-                          </div><!-- /.product-item -->
-                        </div><!-- /.col-lg-4 -->
-                        <!-- Product item #3 -->
-                        <div class="col-sm-6 col-md-6 col-lg-4">
-                          <div class="product-item">
-                            <div class="product__img">
-                              <img src="{% static 'assets/images/duureg/khan-uul.jpg' %}" alt="Product" loading="lazy">
-                              <div class="product__action">
-                                <a href="#" class="btn btn__primary btn__rounded">
-                                  <i class="icon-arrow-right"></i> <span>Дэлгэрэнгүй</span>
-                                </a>
-                              </div><!-- /.product-action -->
-                            </div><!-- /.product-img -->
-                            <div class="product__info">
-                              <h4 class="product__title"><a href="#">Хан уул</a></h4>
-                              <span class="product__price">Дүүрэг</span>
-                            </div><!-- /.product-content -->
-                          </div><!-- /.product-item -->
-                        </div><!-- /.col-lg-4 -->
-                        <!-- Product item #4 -->
                         <div class="col-sm-6 col-md-6 col-lg-4">
                           <div class="product-item">
                             <div class="product__img">
@@ -275,7 +223,7 @@
                             </div><!-- /.product-img -->
                             <div class="product__info">
                               <h4 class="product__title"><a href="{% url 'bayangol' %}">Баянгол</a></h4>
-                              <span class="product__price">Дүүрэг</span>
+                              <span class="product__price">дүүрэг</span>
                             </div><!-- /.product-content -->
                           </div><!-- /.product-item -->
                         </div><!-- /.col-lg-4 -->
@@ -292,15 +240,32 @@
                             </div><!-- /.product-img -->
                             <div class="product__info">
                               <h4 class="product__title"><a href="#">Баянзүрх</a></h4>
-                              <span class="product__price">Дүүрэг</span>
+                              <span class="product__price">дүүрэг</span>
                             </div><!-- /.product-content -->
                           </div><!-- /.product-item -->
-                        </div><!-- /.col-lg-4 -->
-                        <!-- Product item #6 -->
+                        </div>
+                        <!-- Product item #1 -->
                         <div class="col-sm-6 col-md-6 col-lg-4">
                           <div class="product-item">
                             <div class="product__img">
-                              <img src="{% static 'assets/images/duureg/nalaih.jpg' %}" alt="Product" loading="lazy">
+                              <img src="{% static 'assets/images/duureg/09 Sukhbaatar.jpg' %}" alt="Product" loading="lazy">
+                              <div class="product__action">
+                                <a href="{% url 'service1'%}" class="btn btn__primary btn__rounded">
+                                  <i class="icon-arrow-right"></i> <span>Дэлгэрэнгүй</span>
+                                </a>
+                              </div><!-- /.product-action -->
+                            </div><!-- /.product-img -->
+                            <div class="product__info">
+                              <h4 class="product__title"><a href="{% url 'service1'%}">Сүхбаатар</a></h4>
+                              <span class="product__price">дүүрэг</span>
+                            </div><!-- /.product-content -->
+                          </div><!-- /.product-item -->
+                        </div><!-- /.col-lg-4 -->
+                        <!-- Product item #2 -->
+                        <div class="col-sm-6 col-md-6 col-lg-4">
+                          <div class="product-item">
+                            <div class="product__img">
+                              <img src="{% static 'assets/images/duureg/songinihairhan.jpg' %}" alt="Product" loading="lazy">
                               <div class="product__action">
                                 <a href="#" class="btn btn__primary btn__rounded">
                                   <i class="icon-arrow-right"></i> <span>Дэлгэрэнгүй</span>
@@ -308,12 +273,11 @@
                               </div><!-- /.product-action -->
                             </div><!-- /.product-img -->
                             <div class="product__info">
-                              <h4 class="product__title"><a href="#">Налайх</a></h4>
-                              <span class="product__price">Дүүрэг</span>
+                              <h4 class="product__title"><a href="#">Сонгинохайрхан</a></h4>
+                              <span class="product__price">дүүрэг</span>
                             </div><!-- /.product-content -->
                           </div><!-- /.product-item -->
-                        </div><!-- /.col-lg-4 -->
-                        <!-- Product item #7 -->
+                        </div>
                         <div class="col-sm-6 col-md-6 col-lg-4">
                           <div class="product-item">
                             <div class="product__img">
@@ -326,10 +290,33 @@
                             </div><!-- /.product-img -->
                             <div class="product__info">
                               <h4 class="product__title"><a href="#">Чингэлтэй</a></h4>
-                              <span class="product__price">Дүүрэг</span>
+                              <span class="product__price">дүүрэг</span>
                             </div><!-- /.product-content -->
                           </div><!-- /.product-item -->
                         </div><!-- /.col-lg-4 -->
+                        <!-- Product item #3 -->
+                        <div class="col-sm-6 col-md-6 col-lg-4">
+                          <div class="product-item">
+                            <div class="product__img">
+                              <img src="{% static 'assets/images/duureg/khan-uul.jpg' %}" alt="Product" loading="lazy">
+                              <div class="product__action">
+                                <a href="#" class="btn btn__primary btn__rounded">
+                                  <i class="icon-arrow-right"></i> <span>Дэлгэрэнгүй</span>
+                                </a>
+                              </div><!-- /.product-action -->
+                            </div><!-- /.product-img -->
+                            <div class="product__info">
+                              <h4 class="product__title"><a href="#">Хан уул</a></h4>
+                              <span class="product__price">дүүрэг</span>
+                            </div><!-- /.product-content -->
+                          </div><!-- /.product-item -->
+                        </div><!-- /.col-lg-4 -->
+                        <!-- Product item #4 -->
+                    <!-- /.col-lg-4 -->
+                        <!-- Product item #6 -->
+                       <!-- /.col-lg-4 -->
+                        <!-- Product item #7 -->
+                        <!-- /.col-lg-4 -->
                         <!-- Product item #8 -->
                         <div class="col-sm-6 col-md-6 col-lg-4">
                           <div class="product-item">
@@ -343,7 +330,7 @@
                             </div><!-- /.product-img -->
                             <div class="product__info">
                               <h4 class="product__title"><a href="#">Багануур</a></h4>
-                              <span class="product__price">Дүүрэг</span>
+                              <span class="product__price">дүүрэг</span>
                             </div><!-- /.product-content -->
                           </div><!-- /.product-item -->
                         </div><!-- /.col-lg-4 -->
@@ -360,7 +347,23 @@
                             </div><!-- /.product-img -->
                             <div class="product__info">
                               <h4 class="product__title"><a href="#">Багахангай</a></h4>
-                              <span class="product__price">Дүүрэг</span>
+                              <span class="product__price">дүүрэг</span>
+                            </div><!-- /.product-content -->
+                          </div><!-- /.product-item -->
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-4">
+                          <div class="product-item">
+                            <div class="product__img">
+                              <img src="{% static 'assets/images/duureg/nalaih.jpg' %}" alt="Product" loading="lazy">
+                              <div class="product__action">
+                                <a href="#" class="btn btn__primary btn__rounded">
+                                  <i class="icon-arrow-right"></i> <span>Дэлгэрэнгүй</span>
+                                </a>
+                              </div><!-- /.product-action -->
+                            </div><!-- /.product-img -->
+                            <div class="product__info">
+                              <h4 class="product__title"><a href="#">Налайх</a></h4>
+                              <span class="product__price">дүүрэг</span>
                             </div><!-- /.product-content -->
                           </div><!-- /.product-item -->
                         </div><!-- /.col-lg-4 -->
@@ -418,7 +421,7 @@
                               </div><!-- /.product-product-img -->
                               <div class="widget-product__content">
                                 <h5 class="widget-product__title"><a href="#">Dragon</a></h5>
-                                <span class="widget-product__price">auto vocsal</span>
+                                <span class="widget-product__price">bus terminal</span>
                               </div><!-- /.widget-product-content -->
                             </div><!-- /.widget-product-item -->
                             <div class="widget-product-item d-flex align-items-center">
@@ -436,16 +439,16 @@
                               </div><!-- /.product-product-img -->
                               <div class="widget-product__content">
                                 <h5 class="widget-product__title"><a href="#">Orgil</a></h5>
-                                <span class="widget-product__price"></span>
+                                <span class="widget-product__price">supermarket</span>
                               </div><!-- /.widget-product-content -->
                             </div><!-- /.widget-product-item -->
                             <div class="widget-product-item d-flex align-items-center">
                               <div class="widget-product__img">
-                                <a href="#"><img src="assets/images/products/12.jpg" alt="Product" loading="lazy"></a>
+                                <a href="#"><img src="{% static 'assets/images/products/ihdelguur.jpg'%}" alt="Product" loading="lazy"></a>
                               </div><!-- /.product-product-img -->
                               <div class="widget-product__content">
-                                <h5 class="widget-product__title"><a href="#">Apu</a></h5>
-                                <span class="widget-product__price">trade</span>
+                                <h5 class="widget-product__title"><a href="#">State department</a></h5>
+                                <span class="widget-product__price">store</span>
                               </div><!-- /.widget-product-content -->
                             </div><!-- /.widget-product-item -->
                           </div><!-- /.widget-content -->
