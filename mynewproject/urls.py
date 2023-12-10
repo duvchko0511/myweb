@@ -1,4 +1,4 @@
-from django.urls import path
+from django.urls import path, include
 from mynewapp import views
 from django.contrib import admin
 
@@ -20,8 +20,8 @@ urlpatterns = [
     path('huduu/', views.huduu, name='huduu'),
     path('bayangol/', views.bayangol, name='bayangol'),
     path('uilchilgee1/', views.uilchilgee1, name='uilchilgee1'),
-    path('register1/', views.register1, name='register1')
-    
+    path('register1/', views.register1, name='register1'),
+    path('', include('nevtrehapp.urls'))
  
     # Other URL patterns
 ]
