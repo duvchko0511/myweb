@@ -83,14 +83,14 @@
                                     </svg>
                                     <h2 class="brand-text text-primary ms-1">Монгол Хаяг</h2>
                                 </a>
-!
+
                                 <h4 class="card-title mb-1">Тавтай морил 👋</h4>
                                 <p class="card-text mb-2">Хаяг байршилийн нэгдсэн сан</p>
 
                                 <form class="auth-login-form mt-2" action="{% url 'index' %}" method="POST">
                                     <div class="mb-1">
                                         <label for="login-email" class="form-label">Email</label>
-                                        <input type="text" class="form-control" id="login-email" name="login-email" placeholder="john@example.com" aria-describedby="login-email" tabindex="1" autofocus />
+                                        <input type="text" class="form-control" id="login-email" name="email" placeholder="john@example.com" aria-describedby="login-email" tabindex="1" autofocus />
                                     </div>
 
                                     <div class="mb-1">
@@ -116,7 +116,7 @@
 
                                 <p class="text-center mt-2">
                                     <span>New on our platform?</span>
-                                    <a href="{% url 'register1'%}">
+                                    <a href="{% url 'signup'%}">
                                         <span>Create an account</span>
                                     </a>
                                 </p>

@@ -26,8 +26,7 @@ def blog(request):
     return render(request, 'blog.html')
 def shop(request):
     return render(request, 'shop.html')
-def login(request):
-    return render(request, 'login.html')
+
 def signup(request):
     return render(request, 'signup')
 def horoo(request):
@@ -40,7 +39,6 @@ def bayangol(request):
     return render(request, 'duureg/bayangol.html')
 def uilchilgee1(request):
     return render(request, 'turiin/uilchilgee1.html')
-def register1(request):
-    return render(request, 'account/register1.html')
+
 def forgetpass(request):
     return render(request, 'account/forgetpass.html')
