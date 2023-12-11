@@ -1,8 +1,9 @@
+
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from django.contrib import messages , auth
 from mynewapp.models import Nevtreh
-
+from django.contrib.auth import authenticate, login
 def signup(request):
     if request.method == 'POST':
         name = request.POST['name']
@@ -31,7 +32,6 @@ def signup(request):
                 user_model = User.objects.get(username=username)
                 new_profile = Nevtreh.objects.create(user=user_model, id_user=user_model.id)
                 new_profile.save()
-
                 messages.success(request, 'Registration successful!')
                 return redirect('register1/')
         else:
@@ -40,10 +40,20 @@ def signup(request):
     else:
         return render(request, 'register1.html')
 
-def login(request):
+def user_login(request):
     if request.method == 'POST':
         email = request.POST['email']
-        password = request.POST['password']
+        password = request.POST['login-password']  # Make sure the name matches the HTML form
 
-        User = auth (email=email, password=password)
-    return render(request, 'login.html')
+        # Authenticate using the 'username' field, assuming it's an email field
+        user = authenticate(request, username=email, password=password)
+
+        if user is not None:
+            login(request, user)
+            messages.success(request, 'Login successful!')
+            return redirect('dashboard/')  # Replace 'dashboard/' with the appropriate URL after login
+        else:
+            messages.error(request, 'Invalid login credentials.')
+            return redirect('login/')
+    else:
+        return render(request, 'login.html')
