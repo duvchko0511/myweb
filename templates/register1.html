@@ -87,20 +87,20 @@
                                 <h4 class="card-title mb-1">Adventure starts here 🚀</h4>
                                 <p class="card-text mb-2">Make your app management easy and fun!</p>
 
-                                <form class="auth-register-form mt-2" action="{% url 'login' %}" method="POST">
+                                <form class="auth-register-form mt-2" action="login/" method="POST">
 
                                     {% csrf_token %}
                                     <div class="mb-1">
                                         <label for="register-name" class="form-label">name</label>
-                                        <input type="text" class="form-control" id="register-name" name="name" placeholder="johndoe" aria-describedby="register-name" tabindex="1" autofocus />
+                                        <input type="text" class="form-control" id="register-name" name="name" placeholder="name" aria-describedby="register-name" tabindex="1" autofocus />
                                     </div>
                                     <div class="mb-1">
                                         <label for="register-lastname" class="form-label">lastname</label>
-                                        <input type="text" class="form-control" id="register-lastname" name="lastname" placeholder="johndoe" aria-describedby="register-lastname" tabindex="1" autofocus />
+                                        <input type="text" class="form-control" id="register-lastname" name="lastname" placeholder="lastname" aria-describedby="register-lastname" tabindex="1" autofocus />
                                     </div>
                                     <div class="mb-1">
                                         <label for="register-username" class="form-label">Username</label>
-                                        <input type="text" class="form-control" id="register-username" name="username" placeholder="johndoe" aria-describedby="register-username" tabindex="2" autofocus />
+                                        <input type="text" class="form-control" id="register-username" name="username" placeholder="username" aria-describedby="register-username" tabindex="2" autofocus />
                                     </div>
 
                                     <div class="mb-1">
