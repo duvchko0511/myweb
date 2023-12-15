@@ -1,25 +1,373 @@
 {% extends 'basic.html'%}
-{% block title %} Монгол хаяг {% endblock title %}
+{% load static %}
 
-{% block department-single %}
-<ul id="miniPopup-departments" class="miniPopup miniPopup-departments dropdown-menu">
-  <li class="nav__item">
-    <a href="department-single.html" class="nav__item-link">Neurology Clinic</a>
-  </li><!-- /.nav-item -->
-  <li class="nav__item">
-    <a href="department-single.html" class="nav__item-link">Cardiology Clinic</a>
-  </li><!-- /.nav-item -->
-  <li class="nav__item">
-    <a href="department-single.html" class="nav__item-link">Pathology Clinic</a>
-  </li><!-- /.nav-item -->
-  <li class="nav__item">
-    <a href="department-single.html" class="nav__item-link">Laboratory Clinic</a>
-  </li><!-- /.nav-item -->
-  <li class="nav__item">
-    <a href="department-single.html" class="nav__item-link">Pediatric Clinic</a>
-  </li><!-- /.nav-item -->
-  <li class="nav__item">
-    <a href="department-single.html" class="nav__item-link">Cardiac Clinic</a>
-  </li><!-- /.nav-item -->
-</ul>
-{% endblock department-single %}
+   <!-- ============================
+        site iin biy heseg
+    ============================== -->
+{% block content %}
+<section class="services-layout1 services-carousel">
+  <div class="bg-img"><img src="{% static 'assets/images/backgrounds/2.jpg' %}" alt="background"></div>
+  <div class="container">
+    <div class="heading text-center mb-60">
+     
+      <h3 class="heading__title">Газрын зурагаас шууд дараад орох боломжтой</h3>
+    </div>
+   <!-- /.row --> <style>
+  /* Reset some default margin and padding */
+  body, h5 {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Style the tabcontent */
+  .tabcontent {
+    background-color: #213360; /* Set your desired background color */
+    padding: 100px; /* Adjust as needed */
+  }
+
+  /* Style the map container */
+  #map {
+    width: 100%; /* Make the map container full-width */
+    height: 300px; /* Set your desired height */
+    margin: auto; /* Center the map horizontally */
+    border: none; /* Remove the border */
+  }
+
+
+  /* Add additional styles based on your preferences */
+</style>
+<title>Country Map Example</title>
+</head>
+ <!-- Map container -->
+  <div id="map"></div>
+
+
+<script>
+var simplemaps_countrymap_mapdata={
+  main_settings: {
+   //General settings
+    width: "700", //'700' or 'responsive'
+    background_color: "#ea4335",
+    background_transparent: "yes",
+    border_color: "#dee3f1",
+    
+    //State defaults
+    state_description: "Navigate to state",
+    state_color: "#082360",
+    state_hover_color: "#093457",
+    state_url: "{% url 'aimag' %}",
+    border_size: 1.5,
+    all_states_inactive: ".",
+    all_states_zoomable: "yes",
+    
+    //Location defaults
+    location_description: "Location description",
+    location_url: "",
+    location_color: "#FF0067",
+    location_opacity: 0.8,
+    location_hover_opacity: 1,
+    location_size: 25,
+    location_type: "square",
+    location_image_source: "frog.png",
+    location_border_color: "#FFFFFF",
+    location_border: 2,
+    location_hover_border: 2.5,
+    all_locations_inactive: "no",
+    all_locations_hidden: "no",
+    
+    //Label defaults
+    label_color: "#d5ddec",
+    label_hover_color: "#d5ddec",
+    label_size: 22,
+    label_font: "Arial",
+    hide_labels: "no",
+    hide_eastern_labels: "no",
+   
+    //Zoom settings
+    zoom: "yes",
+    manual_zoom: "yes",
+    back_image: "no",
+    initial_back: "no",
+    initial_zoom: "-1",
+    initial_zoom_solo: "no",
+    region_opacity: 1,
+    region_hover_opacity: 0.6,
+    zoom_out_incrementally: "yes",
+    zoom_percentage: 0.99,
+    zoom_time: 0.5,
+    
+    //Popup settings
+    popup_color: "white",
+    popup_opacity: 0.9,
+    popup_shadow: 1,
+    popup_corners: 5,
+    popup_font: "12px/1.5 Verdana, Arial, Helvetica, sans-serif",
+    popup_nocss: "no",
+    
+    //Advanced settings
+    div: "map",
+    auto_load: "yes",
+    url_new_tab: "no",
+    images_directory: "default",
+    fade_time: 0.1,
+    link_text: "View Website",
+    popups: "detect",
+    state_image_url: "",
+    state_image_position: "",
+    location_image_url: "",
+    border_hover_color: "#002182"
+  },
+  state_specific: {
+    MNG3208: {
+      name: "Баян-Өлгий"
+    },
+    MNG3297: {
+      name: "Дорноговь"
+    },
+    MNG3298: {
+      name: "Өмнөговь"
+    },
+    MNG3315: {
+      name: "Хэнтий"
+    },
+    MNG3316: {
+      name: "Архангай"
+    },
+    MNG3317: {
+      name: "Баянхонгор"
+    },
+    MNG3318: {
+      name: "Завхан"
+    },
+    MNG3319: {
+      name: "Говь-Алтай"
+    },
+    MNG3320: {
+      name: "Ховд"
+    },
+    MNG3321: {
+      name: "Хөвсгөл"
+    },
+    MNG3322: {
+      name: "Увс"
+    },
+    MNG3323: {
+      name: "Булган"
+    },
+    MNG3324: {
+      name: "Орхон"
+    },
+    MNG3325: {
+      name: "Дундговь"
+    },
+    MNG3326: {
+      name: "Сэлэнгэ"
+    },
+    MNG3327: {
+      name: "Өвөрхангай"
+    },
+    MNG3328: {
+      name: "Дархан-Уул"
+    },
+    MNG3329: {
+      name: "Төв"
+    },
+    MNG3330: {
+      name: "Говьсүмбэр"
+    },
+    MNG3331: {
+      name: "Улаанбаатар"
+    },
+    MNG3332: {
+      name: "Дорнод"
+    },
+    MNG3333: {
+      name: "Сүхбаатар"
+    }
+  },
+  locations: {
+    "0": {
+      lat: "47.916667",
+      lng: "106.916667",
+      name: "Ulaanbaatar"
+    }
+  },
+  labels: {},
+  legend: {
+    entries: []
+  },
+  regions: {
+    "0": {
+      states: [],
+      color: "ea4335",
+      name: "Dzavkhan",
+      hover_color: "#ffffff",
+      description: "Navigate to state"
+    }
+  }
+};
+</script>
+
+</body>
+  </div><!-- /.container -->
+</section>
+
+</section>
+
+
+<section class="team-layout2 pb-80">
+  <div class="bg-img"><img src="{% static 'assets/images/backgrounds/8.jpg' %}" alt="background"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
+        <div class="heading text-center mb-40">
+          <h3 class="heading__title">Онцлох мэдээ</h3>
+          <p class="heading__desc"> text heregtei
+          </p>
+        </div><!-- /.heading -->
+      </div><!-- /.col-lg-6 -->
+    </div><!-- /.row -->
+    <div class="row">
+      <div class="col-12">
+        <div class="slick-carousel"
+          data-slick='{"slidesToShow": 3, "slidesToScroll": 1, "autoplay": true, "arrows": false, "dots": false, "responsive": [ {"breakpoint": 992, "settings": {"slidesToShow": 2}}, {"breakpoint": 767, "settings": {"slidesToShow": 1}}, {"breakpoint": 480, "settings": {"slidesToShow": 1}}]}'>
+          <!-- Member #1 -->
+          <div class="member">
+            <div class="member__img">
+              <img src="{% static 'assets/images/tuvnom.jpg' %}" alt="member img">
+            </div><!-- /.member-img -->
+            <div class="member__info">
+              <h5 class="member__name"><a href="doctors-single-doctor1.html">Төв номын сан</a></h5>
+              <p class="member__job">Cardiology Specialist</p>
+              <p class="member__desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+              <div class="mt-20 d-flex flex-wrap justify-content-between align-items-center">
+                <a href="doctors-single-doctor1.html" class="btn btn__secondary btn__link btn__rounded">
+                  <span>Унших</span>
+                  <i class="icon-arrow-right"></i>
+                </a>
+                <ul class="social-icons list-unstyled mb-0">
+                  <li><a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a></li>
+                  <li><a href="#" class="twitter"><i class="fab fa-twitter"></i></a></li>
+                  <li><a href="#" class="phone"><i class="fas fa-phone-alt"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- Member #2 -->
+          <div class="member">
+            <div class="member__img">
+              <img src="{% static 'assets/images/barilaga.png' %}" alt="member img">
+            </div><!-- /.member-img -->
+            <div class="member__info">
+              <h5 class="member__name"><a href="doctors-single-doctor1.html">байгууллага</a></h5>
+              <p class="member__job">Ene hesegt hamtragch baiguulaga</p>
+              <p class="member__desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+              <div class="mt-20 d-flex flex-wrap justify-content-between align-items-center">
+                <a href="doctors-single-doctor1.html" class="btn btn__secondary btn__link btn__rounded">
+                  <span>Унших</span>
+                  <i class="icon-arrow-right"></i>
+                </a>
+                <ul class="social-icons list-unstyled mb-0">
+                  <li><a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a></li>
+                  <li><a href="#" class="twitter"><i class="fab fa-twitter"></i></a></li>
+                  <li><a href="#" class="phone"><i class="fas fa-phone-alt"></i></a></li>
+                </ul><!-- /.social-icons -->
+              </div>
+            </div><!-- /.member-info -->
+          </div><!-- /.member -->
+          <!-- Member #3 -->
+          <div class="member">
+            <div class="member__img">
+              <img src="{% static 'assets/images/barilaga.png' %}" alt="member img">
+            </div><!-- /.member-img -->
+            <div class="member__info">
+              <h5 class="member__name"><a href="doctors-single-doctor1.html">байгууллага</a></h5>
+              <p class="member__job">Чиглэл</p>
+              <p class="member__desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+              <div class="mt-20 d-flex flex-wrap justify-content-between align-items-center">
+                <a href="doctors-single-doctor1.html" class="btn btn__secondary btn__link btn__rounded">
+                  <span>Унших</span>
+                  <i class="icon-arrow-right"></i>
+                </a>
+                <ul class="social-icons list-unstyled mb-0">
+                  <li><a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a></li>
+                  <li><a href="#" class="twitter"><i class="fab fa-twitter"></i></a></li>
+                  <li><a href="#" class="phone"><i class="fas fa-phone-alt"></i></a></li>
+                </ul><!-- /.social-icons -->
+              </div>
+            </div><!-- /.member-info -->
+          </div><!-- /.member -->
+          <!-- Member #4 -->
+          <div class="member">
+            <div class="member__img">
+              <img src="{% static 'assets/images/barilaga.png' %}" alt="member img">
+            </div><!-- /.member-img -->
+            <div class="member__info">
+              <h5 class="member__name"><a href="doctors-single-doctor1.html">байгууллага </a></h5>
+              <p class="member__job">Чиглэл</p>
+              <p class="member__desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+              <div class="mt-20 d-flex flex-wrap justify-content-between align-items-center">
+                <a href="doctors-single-doctor1.html" class="btn btn__secondary btn__link btn__rounded">
+                  <span>Унших</span>
+                  <i class="icon-arrow-right"></i>
+                </a>
+                <ul class="social-icons list-unstyled mb-0">
+                  <li><a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a></li>
+                  <li><a href="#" class="twitter"><i class="fab fa-twitter"></i></a></li>
+                  <li><a href="#" class="phone"><i class="fas fa-phone-alt"></i></a></li>
+                </ul><!-- /.social-icons -->
+              </div>
+            </div><!-- /.member-info -->
+          </div><!-- /.member -->
+          <!-- Member #5 -->
+          <div class="member">
+            <div class="member__img">
+              <img src="{% static 'assets/images/tuvnom.jpg' %}" alt="member img">
+            </div>
+            <div class="member__info">
+              <h5 class="member__name"><a href="doctors-single-doctor1.html">байгууллага </a></h5>
+              <p class="member__job">Чиглэл</p>
+              <p class="member__desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+              <div class="mt-20 d-flex flex-wrap justify-content-between align-items-center">
+                <a href="doctors-single-doctor1.html" class="btn btn__secondary btn__link btn__rounded">
+                  <span>Унших</span>
+                  <i class="icon-arrow-right"></i>
+                </a>
+                <ul class="social-icons list-unstyled mb-0">
+                  <li><a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a></li>
+                  <li><a href="#" class="twitter"><i class="fab fa-twitter"></i></a></li>
+                  <li><a href="#" class="phone"><i class="fas fa-phone-alt"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="member">
+            <div class="member__img">
+              <img src="{% static 'assets/images/tuvnom.jpg' %}" alt="member img">
+            </div>
+            <div class="member__info">
+              <h5 class="member__name"><a href="doctors-single-doctor1.html">Kiano Barker</a></h5>
+              <p class="member__job">Pathologist </p>
+              <p class="member__desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+              <div class="mt-20 d-flex flex-wrap justify-content-between align-items-center">
+                <a href="doctors-single-doctor1.html" class="btn btn__secondary btn__link btn__rounded">
+                  <span>Унших</span>
+                  <i class="icon-arrow-right"></i>
+                </a>
+                <ul class="social-icons list-unstyled mb-0">
+                  <li><a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a></li>
+                  <li><a href="#" class="twitter"><i class="fab fa-twitter"></i></a></li>
+                  <li><a href="#" class="phone"><i class="fas fa-phone-alt"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+   <!-- ============================
+        site iin biy hesegiin tugusgul
+    ============================== -->
+{% endblock %}

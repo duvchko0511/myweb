@@ -20,7 +20,7 @@ urlpatterns = [
     path('bayangol/', views.bayangol, name='bayangol'),
     path('uilchilgee1/', views.uilchilgee1, name='uilchilgee1'),
 
-    path('', include('nevtrehapp.urls'))
+    path('', include('accounts.urls'))
  
     # Other URL patterns
 ]
