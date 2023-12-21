@@ -1,6 +1,9 @@
+from django.conf.urls.static import static
 from django.urls import path, include
 from mynewapp import views
 from django.contrib import admin
+
+from mynewproject import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -15,12 +18,13 @@ urlpatterns = [
     path('shop', views.shop, name='shop'),
     path('forgetpass/', views.forgetpass, name='forgetpass'),
     path('horoo/', views.horoo, name='horoo'),
-    path('zahialagch/', views.zahialagch, name='zahialagch'),
     path('huduu/', views.huduu, name='huduu'),
     path('bayangol/', views.bayangol, name='bayangol'),
     path('uilchilgee1/', views.uilchilgee1, name='uilchilgee1'),
 
-    path('', include('accounts.urls'))
- 
+    path('', include('accounts.urls')),
+    path('', include('category.urls')),
+    path('', include('listings.urls')),
+
     # Other URL patterns
-]
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
