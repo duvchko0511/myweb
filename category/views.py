@@ -1,5 +1,8 @@
 # Create your views here.
+from sqlite3 import Connection
+from django.http import Http404
 from django.shortcuts import render , get_object_or_404, redirect
+from psycopg2 import connect
 from cart_app.models import CartItem
 from cart_app.views import _cart_id
 from .models import Category, Product, ImageGallery, ReviewRating
@@ -8,13 +11,12 @@ from django.db.models import Q
 from django.db.models import Avg
 def topics_view(request):
     categories = Category.objects.all()
-    return render(request, 'uilajillagaa/topics.html', {'categories': categories})
-from django.shortcuts import render, get_object_or_404, redirect
-from .models import Category, Product, ImageGallery, ReviewRating
-from django.core.paginator import Paginator
-import sqlite3
-
-from django.db.models import Q, Avg
+    products = Product.objects.filter(is_available=True).order_by('-id')[:8]
+    context = {
+        'categories': categories,
+        'products': products,
+    }
+    return render(request, 'uilajillagaa/topics.html', context)
 # Create your views here.
 def index(request):
     categories = Category.objects.all()
@@ -25,40 +27,21 @@ def index(request):
     }
     return render(request, "index.html", context)
 
-
-
-def product_detail(request, product_slug, category_slug):
+def product_detail(request, category_slug, product_slug):
     try:
-        product = Product.objects.get(category__slug=category_slug, slug=product_slug)
-        product_gallery = ImageGallery.objects.filter(product_id=product)
-        in_cart = CartItem.objects.filter(cart__cart_id=_cart_id(request),product=product).exists()
-        rate = ReviewRating.objects.filter(
-            product_id=product
-        ).aggregate(Avg('rating'))
-        con = sqlite3.connect("db.sqlite3")
-        con.row_factory = sqlite3.Row
-        cur = con.cursor()
-        cur.execute(f"""SELECT title, review, username, pro_image FROM
-                    (auth_user INNER JOIN accounts_account ON auth_user.id = accounts_account.user_id)
-                    INNER JOIN category_reviewrating ON accounts_account.user_id = category_reviewrating.user_id
-                    WHERE product_id = {product}
-                    """)
-        comments = cur.fetchall()
+        # Retrieve the product using slugs
+      product = Product.objects.get(category__slug=category_slug, slug=product_slug)
+      product_gallery = ImageGallery.objects.filter(product_id=product.id)
     except Exception as e:
-        raise e
+        raise e 
     context = {
-        'single_product': product,
-        'in_cart':in_cart,
-        'product_gallery':product_gallery,
-        'comments':comments,
-        'rate':rate['rating__avg']
+        'single_products':product_gallery,
+        'product_gallery':product_gallery
     }
-
-    return render(request, "horoo.html", context)
+    return render(request, 'uilajillagaa/product-detail.html', context)
 
 def search_result(request):
     return render(request, "search-result.html")
-
 def topics(request, category_slug = None):
     categories = None
     products = None
@@ -66,13 +49,13 @@ def topics(request, category_slug = None):
         categories = get_object_or_404(Category, slug=category_slug)
         products = Product.objects.filter(category = categories)
         count=products.count()
-        p=Paginator(products, 2)
+        p=Paginator(products, 1)
         page = request.GET.get("page")
         paged_products = p.get_page(page)
     elif category_slug is None:
         products = Product.objects.filter(is_available = True)
         count=products.count()
-        p=Paginator(products, 2)
+        p=Paginator(products, 1)
         page = request.GET.get("page")
         paged_products = p.get_page(page)
     else:
@@ -90,19 +73,31 @@ def topics(request, category_slug = None):
     return render(request, "uilajillagaa/topics.html", context) 
 def home(request):
     categories = Category.objects.all()
-    con  = sqlite3.connect('db.sqlite3')
-    cur = con.cursor()
-    cur.execute("SELECT * FROM category_product")
-    row = cur.fetchall()
-    print(row)
-    size = len(row)
+
+    # Establish a connection to the PostgreSQL database
+
+    # Create a cursor to execute SQL queries
+    cur = connect.cursor()
+
+    # Execute a sample SQL query (replace it with your actual query)
+    cur.execute("SELECT * FROM your_table_name")
+    rows = cur.fetchall()
+    print(rows)
+    size = len(rows)
+
     # Fetch all products that are available
     products = Product.objects.filter(is_available=True)
+
+    # Close the cursor and connection
+    cur.close()
+    Connection.close()
+
     context = {
         'categories': categories,
         'products': products,
         'size': size,
     }
+
     return render(request, "home.html", context)
 def search(request):
     keyword = request.GET.get('keyword', '')
