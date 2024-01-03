@@ -30,8 +30,7 @@ def contact(request):
     return render(request, 'contact.html')
 def service1(request):
     return render(request, 'service1.html')
-def aimag(request):
-    return render(request, 'aimag.html')
+
 def appointment(request):
     return render(request, 'appointment.html')
 def blog(request):

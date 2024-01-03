@@ -1,4 +1,6 @@
 # Create your views here.
+from itertools import count
+from django.contrib import messages
 from sqlite3 import Connection
 from django.http import Http404
 from django.shortcuts import render , get_object_or_404, redirect
@@ -9,78 +11,78 @@ from .models import Category, Product, ImageGallery, ReviewRating
 from django.core.paginator import Paginator
 from django.db.models import Q
 from django.db.models import Avg
+from .models import Product
+from .forms import ProductForm
 def topics_view(request):
     categories = Category.objects.all()
     products = Product.objects.filter(is_available=True).order_by('-id')[:8]
     context = {
         'categories': categories,
         'products': products,
+        'count':count
     }
     return render(request, 'uilajillagaa/topics.html', context)
 # Create your views here.
-def index(request):
-    categories = Category.objects.all()
-    products = Product.objects.filter(is_available=True).order_by('-id')[:8]
-    context = {
-        'categories': categories,
-        'products': products,
-    }
-    return render(request, "index.html", context)
 
 def product_detail(request, category_slug, product_slug):
     try:
         # Retrieve the product using slugs
-      product = Product.objects.get(category__slug=category_slug, slug=product_slug)
-      product_gallery = ImageGallery.objects.filter(product_id=product.id)
+        product = Product.objects.get(category__slug=category_slug, slug=product_slug)
+        product_gallery = ImageGallery.objects.filter(product_id=product.id)
+        
+        # Get the product count for the category
+        category_product_count = Product.objects.filter(category__slug=category_slug).count()
+        
     except Exception as e:
-        raise e 
-    context = {
-        'single_products':product_gallery,
-        'product_gallery':product_gallery
-    }
-    return render(request, 'uilajillagaa/product-detail.html', context)
+        raise e
 
+    context = {
+        'single_products': product_gallery,
+        'product_gallery': product_gallery,
+        'category_product_count': category_product_count,
+    }
+    
+    return render(request, 'uilajillagaa/category_topics.html', context)
+   
 def search_result(request):
     return render(request, "search-result.html")
-def topics(request, category_slug = None):
-    categories = None
-    products = None
-    if category_slug != None:
-        categories = get_object_or_404(Category, slug=category_slug)
-        products = Product.objects.filter(category = categories)
-        count=products.count()
-        p=Paginator(products, 1)
-        page = request.GET.get("page")
-        paged_products = p.get_page(page)
-    elif category_slug is None:
-        products = Product.objects.filter(is_available = True)
-        count=products.count()
-        p=Paginator(products, 1)
-        page = request.GET.get("page")
-        paged_products = p.get_page(page)
-    else:
-        categories = Category.objects.all()
-        products = Product.objects.filter(category = categories)
-        count=products.count()
-        p=Paginator(products, 2)
-        page = request.GET.get("page")
-        paged_products = p.get_page(page)
+def category_topics(request, category_slug):
+    selected_category = get_object_or_404(Category, slug=category_slug)
+    products = Product.objects.filter(category=selected_category)
+    count = products.count()
+    paginator = Paginator(products, 2)
+    page = request.GET.get("page")
+    paged_products = paginator.get_page(page)
+
     context = {
+        'selected_category': selected_category,
         'products': paged_products,
-        'categories': categories,
-        'count': count
+        'count': count,
     }
-    return render(request, "uilajillagaa/topics.html", context) 
+
+    return render(request, "uilajillagaa/category_topics.html", context)
+def add_product(request):
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Бүтээгдэхүүнийг амжилттай нэмлээ.')
+            return redirect('index')  # Redirect to a success page
+    else:
+        form = ProductForm()
+
+    context = {'form': form}
+    return render(request, 'uilajillagaa/add_product.html', context)
 def home(request):
     categories = Category.objects.all()
 
     # Establish a connection to the PostgreSQL database
 
-    # Create a cursor to execute SQL queries
+    # Create a cursor to execute SQL           
     cur = connect.cursor()
 
     # Execute a sample SQL query (replace it with your actual query)
-    cur.execute("SELECT * FROM your_table_name")
+    cur.execute("SELECT * FROM categoty_product")
     rows = cur.fetchall()
     print(rows)
     size = len(rows)

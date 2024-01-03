@@ -1,5 +1,6 @@
 from django.conf.urls.static import static
 from django.urls import path, include
+from accounts import aimag
 from mynewapp import views
 from django.contrib import admin
 
@@ -12,8 +13,8 @@ urlpatterns = [
     path('contact/', views.contact, name='contact'),
     path('services/', views.services, name='services'),
     path('service1/', views.service1, name='service1'),
-    path('aimag/', views.aimag, name='aimag'),
-    path('appointment/', views.appointment, name='appointment'),
+    path('aimag/', aimag.aimagSumJagsaalt, name='aimagSumJagsaalt'),
+
     path('blog/', views.blog, name='blog'),
     path('shop', views.shop, name='shop'),
     path('forgetpass/', views.forgetpass, name='forgetpass'),

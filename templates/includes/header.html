@@ -1,3 +1,4 @@
+{% load static %}
 <header class="header header-layout1">
     <div class="header-topbar">
       <div class="container-fluid">
@@ -44,7 +45,7 @@
    <nav class="navbar navbar-expand-lg sticky-navbar">
     <div class="container-fluid">
       <a class="navbar-brand" href="index.html">
-        <img src="..assets/images/logo/111.png" class="logo-dark logo" alt="logo">
+        <img src="{% static 'assets/images/logo/111.png' %}" class="logo-dark logo" alt="logo">
       </a>
       <button class="navbar-toggler" type="button">
         <span class="menu-lines"><span></span></span>
@@ -86,7 +87,7 @@
        <!-- /.nav-item -->
        <!-- /.nav-item -->
        <li class="nav__item">
-        <a href="{% url 'aimag' %}" class="nav__item-link">Зөвлөмж</a>
+        <a href="{% url 'aimagSumJagsaalt' %}" class="nav__item-link">Зөвлөмж</a>
       </li><!-- /.nav-item -->
         </ul><!-- /.navbar-nav -->
         <button class="close-mobile-menu d-block d-lg-none"><i class="fas fa-times"></i></button>
