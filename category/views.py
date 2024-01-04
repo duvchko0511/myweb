@@ -3,7 +3,7 @@ from itertools import count
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.contrib import messages
 from sqlite3 import Connection
-from django.http import Http404
+from django.http import Http404, HttpResponseServerError
 from django.shortcuts import render , get_object_or_404, redirect
 from psycopg2 import connect
 from cart_app.models import CartItem
@@ -14,6 +14,7 @@ from django.db.models import Q
 from django.db.models import Avg
 from .models import Product
 from .forms import ProductForm
+import logging
 def topics_view(request):
     categories = Category.objects.all()
     products = Product.objects.filter(is_available=True).order_by('-id')[:8]
@@ -25,6 +26,10 @@ def topics_view(request):
     return render(request, 'uilajillagaa/topics.html', context)
 # Create your views here.
 
+from django.http import HttpResponseNotFound
+
+logger = logging.getLogger(__name__)
+
 def product_detail(request, category_slug, product_slug):
     try:
         # Retrieve the product using slugs
@@ -33,17 +38,21 @@ def product_detail(request, category_slug, product_slug):
         
         # Get the product count for the category
         category_product_count = Product.objects.filter(category__slug=category_slug).count()
-        
-    except Exception as e:
-        raise e
 
-    context = {
-        'single_products': product_gallery,
-        'product_gallery': product_gallery,
-        'category_product_count': category_product_count,
-    }
+        context = {
+            'single_products': product_gallery,
+            'product_gallery': product_gallery,
+            'category_product_count': category_product_count,
+        }
+        
+        return render(request, 'uilajillagaa/category_topics.html', context)
     
-    return render(request, 'uilajillagaa/category_topics.html', context)
+    except Product.DoesNotExist:
+        logger.error(f"Product does not exist. Category_slug: {category_slug}, Product_slug: {product_slug}")
+        return HttpResponseNotFound("Product not found")
+    except Exception as e:
+        logger.error(f"An unexpected error occurred: {e}")
+        return HttpResponseServerError("An unexpected error occurred.")
    
 def search_result(request):
     return render(request, "search-result.html")
@@ -73,9 +82,9 @@ def category_topics(request, category_slug):
     }
 
     return render(request, "uilajillagaa/category_topics.html", context)
-def product_list(request, category):
+def product_list(request, category=None):
     products = Product.objects.all()
-    return render(request, "uilajillagaa/category_topics.html", {'products': products})
+    return render(request, "uilajillagaa/product_list.html", {'products': products})
 def add_product(request):
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES)
