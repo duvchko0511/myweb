@@ -1,4 +1,5 @@
 <!-- add_product.html -->
+<h2>{% if product %}Edit Product{% else %}Add Product{% endif %}</h2>
 <form method="post" enctype="multipart/form-data">
   {% csrf_token %}
   {{ form.as_p }}

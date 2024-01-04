@@ -26,6 +26,6 @@ urlpatterns = [
     path('', include('accounts.urls')),
     path('', include('category.urls')),
     path('', include('listings.urls')),
-
+    
     # Other URL patterns
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

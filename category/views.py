@@ -1,5 +1,6 @@
 # Create your views here.
 from itertools import count
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.contrib import messages
 from sqlite3 import Connection
 from django.http import Http404
@@ -50,9 +51,20 @@ def category_topics(request, category_slug):
     selected_category = get_object_or_404(Category, slug=category_slug)
     products = Product.objects.filter(category=selected_category)
     count = products.count()
-    paginator = Paginator(products, 2)
+    
+    # Change the number 2 to the desired number of products per page
+    paginator = Paginator(products, 4)  # Adjust the number as needed
+
     page = request.GET.get("page")
-    paged_products = paginator.get_page(page)
+    
+    try:
+        paged_products = paginator.page(page)
+    except PageNotAnInteger:
+        # If page is not an integer, deliver the first page.
+        paged_products = paginator.page(1)
+    except EmptyPage:
+        # If page is out of range (e.g. 9999), deliver last page of results.
+        paged_products = paginator.page(paginator.num_pages)
 
     context = {
         'selected_category': selected_category,
@@ -61,18 +73,38 @@ def category_topics(request, category_slug):
     }
 
     return render(request, "uilajillagaa/category_topics.html", context)
+def product_list(request, category):
+    products = Product.objects.all()
+    return render(request, "uilajillagaa/category_topics.html", {'products': products})
 def add_product(request):
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
             messages.success(request, 'Бүтээгдэхүүнийг амжилттай нэмлээ.')
-            return redirect('index')  # Redirect to a success page
+            return redirect('product_detail', category_slug=form.instance.category.slug, product_slug=form.instance.slug)  # Redirect to a success page
     else:
         form = ProductForm()
 
     context = {'form': form}
     return render(request, 'uilajillagaa/add_product.html', context)
+def product_edit(request, pk):
+    product = get_object_or_404(Product, pk=pk)
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES, instance=product)
+        if form.is_valid():
+            product = form.save(commit=False)
+            form.save()
+            messages.success(request, 'Бүтээгдэхүүн амжилттай заслаа.')
+            return redirect('product_detail', pk=product.pk)
+        else:
+            form = ProductForm(instance=product)
+        context = {'form': form, 'product': product}
+        return render(request, 'uilajillagaa/add_product.html', context)
+def product_delete(request, pk):
+    product = get_object_or_404(Product, pk=pk)
+    product.delete()
+    return redirect('product_list')
 def home(request):
     categories = Category.objects.all()
 
