@@ -1,0 +1,46 @@
+<!-- This is a simple example; customize it based on your actual model fields -->
+<h2>{{ product.name }}</h2>
+<img src="{{ product.image.url }}" alt="{{ product.name }}" loading="lazy">
+<p>{{ product.description }}</p>
+<span class="product__price">{{ product.price }} дүн</span>
+<!-- Add more details as needed -->
+{% extends 'base.html' %}
+
+{% block content %}
+  <!-- Add your custom styles or scripts specific to the product detail page here -->
+
+  <section class="page-title page-title-layout2 bg-overlay text-center pb-0">
+    <!-- Customize the background image based on your product details -->
+    <div class="bg-img"><img src="{{ product.image.url }}" alt="{{ product.name }}"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-8 offset-xl-2">
+          <h1 class="pagetitle__heading">{{ product.name }}</h1>
+          <p class="pagetitle__desc mb-30">{{ product.description }}</p>
+        </div><!-- /.col-xl-8 -->
+      </div><!-- /.row -->
+    </div><!-- /.container -->
+  </section><!-- /.page-title -->
+  
+
+  <section id="content" class="pb-80">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-8">
+          <div class="text-block mb-50">
+            <!-- Add your product details here -->
+            <p class="text-block__desc mb-20">Price: {{ product.price }} дүн</p>
+            <!-- Add more details as needed -->
+          </div><!-- /.text-block -->
+
+          <!-- Add other sections or details based on your product model -->
+
+        </div><!-- /.col-lg-8 -->
+        <!-- Add a sidebar or other details if needed -->
+      </div><!-- /.row -->
+    </div><!-- /.container -->
+  </section>
+
+  <!-- Add additional sections or features based on your requirements -->
+
+{% endblock %}

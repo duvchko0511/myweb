@@ -1,0 +1,50 @@
+{% load static %}
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="description" content="Монгол хаяг">
+  <link href="assets/images/favicon/favicon.png" rel="icon">
+  <title>
+  </title>
+  <link rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Roboto:wght@400;700&display=swap">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;800&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
+  <link rel="stylesheet" href="https://i.icomoon.io/public/48159919ac/IcoMoonApp1/style.css">
+  <link rel="stylesheet" href="{% static 'assets/css/libraries.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/css/custom.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/css/flaticon.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/css/huvaalt.css' %}">
+  <link href="{% static 'd-assets/css/aa.css' %}" rel="stylesheet">
+  <!-- Include Simplemaps CSS file -->
+<link rel="stylesheet" type="text/css" href="path/to/simplemaps-countrymap.css">
+{% include 'includes/header.html' %}
+<h2>Product Detail</h2>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <!-- Display detailed product information -->
+      <h3>{{ product.product_name }}</h3>
+      <p>{{ product.description }}</p>
+      <!-- Add more details as needed -->
+    </div>
+  </div>
+</div>
+
+<!-- CRUD Actions -->
+<a href="'list'" class="btn btn__secondary btn__link btn__rounded">
+  <span>Back to List</span>
+  <i class="icon-arrow-left"></i>
+</a>
+<a href='edit' id=product.id " class="btn btn__primary btn__link btn__rounded">
+  <span>Edit</span>
+  <i class="icon-pencil"></i>
+</a>
+<a href='product_delete' product.id " class="btn btn__danger btn__link btn__rounded">
+  <span>Delete</span>
+  <i class="icon-trash"></i>
+</a>

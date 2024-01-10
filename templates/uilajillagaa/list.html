@@ -1,0 +1,60 @@
+{%load static%}
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="description" content="Монгол хаяг">
+  <link href="assets/images/favicon/favicon.png" rel="icon">
+  <title>
+ 
+  </title>
+  <link rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Roboto:wght@400;700&display=swap">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;800&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
+  <link rel="stylesheet" href="https://i.icomoon.io/public/48159919ac/IcoMoonApp1/style.css">
+  <link rel="stylesheet" href="{% static 'assets/css/libraries.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/css/custom.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/css/flaticon.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/css/cate.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/css/c.css' %}">
+
+</head>
+<!-- templates/uilajillagaa/product_list.html -->
+{% include 'includes/header.html' %}
+<!-- Add this to the head of your HTML file -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<h2>Product List</h2>
+
+  <div class="container">
+    <div class="row">
+      {% for product in products %}
+        <div class="col-sm-6 col-md-4 col-lg-4">
+          <!-- Display product information as needed -->
+         
+          <h3>{{ product.product_name }}</h3>
+          <p>{{ product.description }}</p>
+          <!-- Add more details as needed -->
+          
+          <!-- CRUD Actions -->
+          <a href="{% url 'product_detail' category_slug=product.category.slug product_slug=product.slug %}" class="btn btn__secondary btn__link btn__rounded">
+            <span>Read More</span>
+            <i class="icon-arrow-right"></i>
+          </a>
+          <a href="{% url 'edit' product_id=product.id %}" class="btn btn__primary btn__link btn__rounded">
+            <span>Edit</span>
+            <i class="icon-pencil"></i>
+        </a>
+        
+        <a href="{% url 'product_delete' product_id=product.id %}" class="btn btn__danger btn__link btn__rounded">
+          <span>Delete</span>
+          <i class="icon-trash"></i>
+      </a>
+      
+        </div>
+      {% endfor %}
+    </div>
+  </div>

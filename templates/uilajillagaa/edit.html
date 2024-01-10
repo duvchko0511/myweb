@@ -1,0 +1,17 @@
+
+
+{% block content %}
+  <h2>Edit Product</h2>
+
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    
+    <button type="submit" class="btn btn__primary btn__rounded">Save Changes</button>
+  </form>
+
+  <a href="'product_detail'" class="btn btn__secondary btn__link btn__rounded">
+    <span>Cancel</span>
+    <i class="icon-arrow-left"></i>
+  </a>
+{% endblock %}
