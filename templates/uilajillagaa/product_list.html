@@ -1,0 +1,32 @@
+<!-- templates/uilajillagaa/product_list.html -->
+
+<!-- Add this to the head of your HTML file -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<h2>Product List</h2>
+{% for product in products %}
+  <div class="product-item">
+    <p>{{ product.product_name }} - {{ product.description }} - {{ product.price }}</p>
+    
+    <!-- Read (View) Icon -->
+    {% if product.slug %}
+      <a href="{% url 'product_detail' category_slug=product.category.slug product_slug=product.slug %}" class="icon-link">
+        <i class="fas fa-eye"></i> View
+      </a>
+    {% else %}
+      <span class="icon-link-disabled">
+        <i class="fas fa-eye"></i> View (No Link)
+      </span>
+    {% endif %}
+    
+    <!-- Update (Edit) Icon -->
+    <a href="{% url 'product_edit' pk=product.pk %}" class="icon-link">
+      <i class="fas fa-edit"></i> Edit
+    </a>
+
+    <!-- Delete Icon -->
+    <a href="{% url 'product_delete' pk=product.pk %}" class="icon-link">
+      <i class="fas fa-trash-alt"></i> Delete
+    </a>
+  </div>
+{% endfor %}

@@ -1,5 +1,6 @@
 import os
 
+
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -15,6 +16,7 @@ SECRET_KEY = 'django-insecure-j)k(b8*x_-x&5@0!8iisy5^-umw7n)_6&sf_b(-d5^h4@ts5(@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+
 ALLOWED_HOSTS = []
 
 
@@ -28,8 +30,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'mynewapp.apps.MynewappConfig',
-    'accounts'
-    
+    'accounts',
+    'category',
+    'listings.apps.ListingsConfig',
+    'cart_app',
+    'realtors.apps.RealtorsConfig',
 ]
 
 MIDDLEWARE = [
@@ -69,11 +74,11 @@ WSGI_APPLICATION = 'mynewproject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'mongolkhayagdb',
+        'NAME': 'khayag',
         'USER': 'postgres',
-        'PASSWORD': '80320511',
-        'HOST': 'localhost',  # Set to the IP address or hostname of your database server
-        'PORT': '5432',       # Set to the port on which your PostgreSQL server is running
+        'PASSWORD': '1234',
+        'HOST': 'localhost',
+        'PORT': '5433',
     }
 }
 

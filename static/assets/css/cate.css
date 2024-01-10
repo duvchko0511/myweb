@@ -59,3 +59,12 @@
     background: #54acff;
     box-shadow: 0 5px 10px rgba(71, 71, 71, 0.4);
 }
+.icon-link {
+    margin-right: 10px;
+    color: #333; /* Adjust the color as needed */
+    text-decoration: none;
+  }
+  
+  .product-item {
+    margin-bottom: 20px;
+  }

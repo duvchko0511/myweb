@@ -1,6 +1,15 @@
+<<<<<<< HEAD
 <form method="post" enctype="multipart/form-data">
   {% csrf_token %}
   {{ form.as_p }}
   <button type="submit" name="delete">Delete</button>
   <button type="submit">Save</button>
+=======
+<!-- add_product.html -->
+<h2>{% if product %}Edit Product{% else %}Add Product{% endif %}</h2>
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit" class="btn btn-secondary">Илгээх</button>
+>>>>>>> 219d2a14fb43233bc83c3aee05265675b92a6ed6
 </form>

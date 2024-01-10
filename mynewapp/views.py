@@ -1,5 +1,17 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .forms import *
+
+
+
+def employee_list(request):
+    return
+
+def employee_form(request):
+    return
+
+def employee_delete(request):
+    return
 
 def mynewapp(request):
     # Your view logic here
@@ -18,8 +30,7 @@ def contact(request):
     return render(request, 'contact.html')
 def service1(request):
     return render(request, 'service1.html')
-def aimag(request):
-    return render(request, 'aimag.html')
+
 def appointment(request):
     return render(request, 'appointment.html')
 def blog(request):
@@ -42,3 +53,4 @@ def uilchilgee1(request):
 
 def forgetpass(request):
     return render(request, 'account/forgetpass.html')
+

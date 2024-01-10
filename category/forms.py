@@ -2,11 +2,14 @@ from django import forms
 from django.utils.text import slugify
 from .models import Product
 
+<<<<<<< HEAD
 # forms.py
 from django import forms
 from django.utils.text import slugify
 from .models import Product
 
+=======
+>>>>>>> 219d2a14fb43233bc83c3aee05265675b92a6ed6
 class ProductForm(forms.ModelForm):
     class Meta:
         model = Product
@@ -23,4 +26,8 @@ class ProductForm(forms.ModelForm):
         if commit:
             instance.save()
 
+<<<<<<< HEAD
         return instance
+=======
+        return instance
+>>>>>>> 219d2a14fb43233bc83c3aee05265675b92a6ed6
