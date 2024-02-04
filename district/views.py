@@ -1,12 +1,15 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Product
+from .models import Duureg
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import Address
 from .forms import AddressForm
 
 def address_list(request):
-    addresses = Address.objects.all()
-    return render(request, 'hayg/products.html', {'addresses': addresses})
+    addresss = Address.objects.all()
+    context = {
+        'addresss': addresss
+        }
+    return render(request, 'hayg/duuregs.html', context)
 
 def address_detail(request, pk):
     address = get_object_or_404(Address, pk=pk)
@@ -34,20 +37,20 @@ def address_edit(request, pk):
     return render(request, 'address_app/address_form.html', {'form': form})
 
 def address_delete(request, pk):
-    address = get_object_or_404(Address, pk=pk)
-    address.delete()
+    addresss = get_object_or_404(Address, pk=pk)
+    addresss.delete()
     return redirect('address_list')
 
-def product_list(request):
-    products = Product.objects.all()
+def duureg_list(request):
+    duuregs = Duureg.objects.all()
     context = {
-        'products': products,
+        'duuregs': duuregs,
     }
-    return render(request, 'hayg/products.html', context)
+    return render(request, 'hayg/duuregs.html', context)
 
-def detail(request, product_slug):
-    product = get_object_or_404(Product, slug=product_slug)
+def detail(request, duureg_slug):
+    duureg = get_object_or_404(Duureg, slug=duureg_slug)
     context = {
-        'product': product,  # Change the variable name to 'product'
+        'duureg': duureg,  # Change the variable name to 'product'
     }
     return render(request, 'hayg/detail.html', context)

@@ -20,11 +20,7 @@ class Category(models.Model):
 
 class Product(models.Model):
     product_name = models.CharField(max_length=200, unique=True)
-<<<<<<< HEAD
     slug = models.SlugField(unique=True)
-=======
-    slug = models.SlugField(max_length=200, unique=True, blank=True, null=True)
->>>>>>> 219d2a14fb43233bc83c3aee05265675b92a6ed6
     description = models.TextField(max_length=500, blank=True)
     images = models.ImageField(upload_to='photos/products', null=True, blank=True) 
     is_available = models.BooleanField(default=True)
@@ -56,10 +52,6 @@ class Product(models.Model):
             self.slug = slugify(self.product_name)
         super().save(*args, **kwargs)
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 219d2a14fb43233bc83c3aee05265675b92a6ed6
 class ImageGallery(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     image = models.ImageField(upload_to='topics/products', max_length=255)

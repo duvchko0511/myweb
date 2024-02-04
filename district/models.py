@@ -2,7 +2,7 @@
 from django.db import models
 from django.utils.text import slugify
 
-class Product(models.Model):
+class Duureg(models.Model):
     name = models.CharField(max_length=255)
     slug = models.SlugField(unique=True)
     image = models.ImageField(upload_to='product_images/', blank=True, null=True)
@@ -10,7 +10,7 @@ class Product(models.Model):
     def save(self, *args, **kwargs):
         # Auto-generate the slug when saving the product
         self.slug = slugify(self.name)
-        super(Product, self).save(*args, **kwargs)
+        super(Duureg, self).save(*args, **kwargs)
 
     # other fields and methods in your model
 

@@ -3,15 +3,10 @@ from itertools import count
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.contrib import messages
 from sqlite3 import Connection
-<<<<<<< HEAD
-from django.http import Http404, HttpResponseNotAllowed, HttpResponseServerError
-=======
-from django.http import Http404, HttpResponseServerError
->>>>>>> 219d2a14fb43233bc83c3aee05265675b92a6ed6
+
 from django.shortcuts import render , get_object_or_404, redirect
 from psycopg2 import connect
-from cart_app.models import CartItem
-from cart_app.views import _cart_id
+
 from .models import Category, Product, ImageGallery, ReviewRating
 from django.core.paginator import Paginator
 from django.db.models import Q
@@ -30,16 +25,11 @@ def topics_view(request):
     return render(request, 'uilajillagaa/topics.html', context)
 # Create your views here.
 
-from django.http import HttpResponseNotFound
-<<<<<<< HEAD
-def product_detail(request, category_slug, product_slug):
-=======
 
 logger = logging.getLogger(__name__)
 
+
 def product_detail(request, category_slug, product_slug):
-    try:
->>>>>>> 219d2a14fb43233bc83c3aee05265675b92a6ed6
         # Retrieve the product using slugs
         product = Product.objects.get(category__slug=category_slug, slug=product_slug)
         product_gallery = ImageGallery.objects.filter(product_id=product.id)
@@ -53,7 +43,6 @@ def product_detail(request, category_slug, product_slug):
             'category_product_count': category_product_count,
         }
         
-<<<<<<< HEAD
         return render(request, 'uilajillagaa/product_detail.html', context)
     
 
@@ -63,20 +52,6 @@ def product_detail(request, category_slug, product_slug):
 def search_result(request):
     return render(request, "search-result.html")
 def category_topics(request, category_slug, ):
-=======
-        return render(request, 'uilajillagaa/category_topics.html', context)
-    
-    except Product.DoesNotExist:
-        logger.error(f"Product does not exist. Category_slug: {category_slug}, Product_slug: {product_slug}")
-        return HttpResponseNotFound("Product not found")
-    except Exception as e:
-        logger.error(f"An unexpected error occurred: {e}")
-        return HttpResponseServerError("An unexpected error occurred.")
-   
-def search_result(request):
-    return render(request, "search-result.html")
-def category_topics(request, category_slug):
->>>>>>> 219d2a14fb43233bc83c3aee05265675b92a6ed6
     selected_category = get_object_or_404(Category, slug=category_slug)
     products = Product.objects.filter(category=selected_category)
     count = products.count()
@@ -102,7 +77,6 @@ def category_topics(request, category_slug):
     }
 
     return render(request, "uilajillagaa/category_topics.html", context)
-<<<<<<< HEAD
 
 
 def list(request):
@@ -156,40 +130,6 @@ def product_delete(request, product_id):
 
  # Only allow POST requests
 
-=======
-def product_list(request, category=None):
-    products = Product.objects.all()
-    return render(request, "uilajillagaa/product_list.html", {'products': products})
-def add_product(request):
-    if request.method == 'POST':
-        form = ProductForm(request.POST, request.FILES)
-        if form.is_valid():
-            form.save()
-            messages.success(request, 'Бүтээгдэхүүнийг амжилттай нэмлээ.')
-            return redirect('product_detail', category_slug=form.instance.category.slug, product_slug=form.instance.slug)  # Redirect to a success page
-    else:
-        form = ProductForm()
-
-    context = {'form': form}
-    return render(request, 'uilajillagaa/add_product.html', context)
-def product_edit(request, pk):
-    product = get_object_or_404(Product, pk=pk)
-    if request.method == 'POST':
-        form = ProductForm(request.POST, request.FILES, instance=product)
-        if form.is_valid():
-            product = form.save(commit=False)
-            form.save()
-            messages.success(request, 'Бүтээгдэхүүн амжилттай заслаа.')
-            return redirect('product_detail', pk=product.pk)
-        else:
-            form = ProductForm(instance=product)
-        context = {'form': form, 'product': product}
-        return render(request, 'uilajillagaa/add_product.html', context)
-def product_delete(request, pk):
-    product = get_object_or_404(Product, pk=pk)
-    product.delete()
-    return redirect('product_list')
->>>>>>> 219d2a14fb43233bc83c3aee05265675b92a6ed6
 def home(request):
     categories = Category.objects.all()
 

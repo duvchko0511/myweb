@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'listings.apps.ListingsConfig',
     'cart_app',
     'realtors.apps.RealtorsConfig',
+    'district'
 ]
 
 MIDDLEWARE = [

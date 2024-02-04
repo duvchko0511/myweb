@@ -1,6 +1,6 @@
 # admin.py
 from django.contrib import admin
-from .models import Product, Address
+from .models import Duureg, Address
 class AddressAdmin(admin.ModelAdmin):
     list_display = ('street_address', 'city', 'state', 'postal_code')
     search_fields = ('street_address', 'city', 'state', 'postal_code')
@@ -8,9 +8,9 @@ class AddressAdmin(admin.ModelAdmin):
 
 admin.site.register(Address, AddressAdmin)
 
-class ProductAdmin(admin.ModelAdmin):
+class DuuregAdmin(admin.ModelAdmin):
     list_display = ('name',)
     search_fields = ('name',)
     prepopulated_fields = {'slug': ('name',)}
 
-admin.site.register(Product, ProductAdmin)
+admin.site.register(Duureg, DuuregAdmin)

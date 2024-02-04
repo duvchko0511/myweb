@@ -1,5 +1,5 @@
 {%load static%}
-<!DOCTYPE html>
+<!DOCTYPE html>Duuregle
 <html lang="en">
 
 {% block stylecss %}
@@ -83,25 +83,25 @@
                         </select>
                       </div>
                       <div class="row">
-                        {% for product in products %}
+                        {% for duureg in duuregs %}
                             <div class="col-sm-6 col-md-6 col-lg-4">
                                 <div class="product-item">
                                     <div class="product__img">
-                                        <img src="{{ product.image.url }}" alt="{{ product.name }}" loading="lazy">
+                                        <img src="{{ duureg.image.url }}" alt="{{ duureg.name }}" loading="lazy">
                                         <div class="product__action">
-                                            <a href="{% url 'detail' product.slug %}" class="btn btn__primary btn__rounded">
+                                            <a href="{% url 'detail' duureg.slug %}" class="btn btn__primary btn__rounded">
                                                 <i class="icon-arrow-right"></i> <span>Дэлгэрэнгүй</span>
                                             </a>
                                         </div><!-- /.product-action -->
                                     </div><!-- /.product-img -->
                                     <div class="product__info">
-                                        <h4 class="product__title"><a href="{% url 'detail' product.slug %}">{{ product.name }}</a></h4>
-                                        <span class="product__price">{{ product.price }} дүүрэг</span>
+                                        <h4 class="product__title"><a href="{% url 'detail' duureg.slug %}">{{ duureg.name }}</a></h4>
                                     </div><!-- /.product-content -->
                                 </div><!-- /.product-item -->
                             </div><!-- /.col-lg-4 -->
                         {% endfor %}
-                      </div>
+                    </div>
+                    
                       <!-- your_template.html --><!-- /.row -->
 <!-- /.row -->
                       <div class="row">
@@ -197,18 +197,20 @@
                         </div><!-- /.widget-filter -->
                        <!-- hayg/products.html -->
   <!-- Your existing HTML content goes here -->
-  <div class="widget widget-tags">
-    <h5 class="widget__title">Олон нийтэд хэрэгцээт байршил</h5>
-    <div class="widget-content">
-      <ul class="list-unstyled">
-        {% for address in addresses %}
-          <li>
-            {{ address.street_address }}, {{ address.city }}, {{ address.state }} {{ address.postal_code }}
-          </li>
-        {% endfor %}
-      </ul>
-    </div><!-- /.widget-content -->
-  </div>
+                              <!-- Content goes here -->
+                        <div class="widget widget-tags">
+                          <h5 class="widget__title">Олон нийтэд хэрэгцээт байршил</h5>
+                          <div class="widget-content">
+                              <ul class="list-unstyled">
+                                  {% for address in addresss %}
+                                      <li>
+                                          {{ address.street_address }}, {{ address.city }}, {{ address.state }} {{ address.postal_code }}
+                                      </li>
+                                  {% endfor %}
+                              </ul>
+                          </div><!-- /.widget-content -->
+                        </div>
+
 
 
                       <!-- /.widget-Tags -->
@@ -232,17 +234,7 @@
         
       </div>  
     </div>
-  
-  
-  </div><!-- /.col-12 -->
-</div><!-- /.row -->
-</div><!-- /.container -->
-</section>
-            </div>
-           
-            
-        
-          
+                
           
           </div><!-- /.col-12 -->
         </div><!-- /.row -->
